@@ -12,7 +12,7 @@ class _HomeviewState extends State<Homeview> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Hekllo")
+        Text("Hekllo Bea")
       ],
     );
   }
