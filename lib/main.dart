@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:rydr/Views/Home/HomeView.dart';
+import 'package:rydr/Views/Home/Home_View.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
