@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44231564002",
+    "project_id": "rydr-f7de1",
+    "storage_bucket": "rydr-f7de1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44231564002:android:c41320dec573b5d15f9cbb",
+        "android_client_info": {
+          "package_name": "com.example.rydr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44231564002-1di9e5s20g15q88tgc6rdi5sk3b2fb5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdqrHBFZ1Jc00RAYYuuAEW3a52zvhveD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44231564002-1di9e5s20g15q88tgc6rdi5sk3b2fb5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
