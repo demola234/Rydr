@@ -58,8 +58,8 @@ class _OnboardingState extends State<Onboarding> {
     print("Shared pref called");
     int isViewed = 0;
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('onBoard', isViewed);
-    print(prefs.getInt('onBoard'));
+    await prefs.setInt('onBoarding', isViewed);
+    print(prefs.getInt('onBoarding'));
   }
 
   @override

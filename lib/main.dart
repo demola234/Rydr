@@ -16,7 +16,7 @@ void main() async {
   await Firebase.initializeApp();
 
   final prefs = await SharedPreferences.getInstance();
-  isviewed = prefs.getInt('onBoard');
+  isviewed = prefs.getInt('onBoarding');
   runApp(MyApp());
 }
 
@@ -24,10 +24,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Rydr Application',
+        title: 'Rydr Hailing Application',
         debugShowCheckedModeBanner: false,
-        home: isviewed != 0 ? 
-        Onboarding() : 
-        Homeview());
+        home: isviewed != 0 ? Onboarding() : Homeview());
   }
 }
