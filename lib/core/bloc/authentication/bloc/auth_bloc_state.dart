@@ -15,14 +15,20 @@ class AuthBlocLaoding extends AuthBlocState {}
 
 ///[AuthBlocLogin] State when the user have the been loaded into the application
 class AuthBlocLogin extends AuthBlocState {
-  final String uid;
-  const AuthBlocLogin(this.uid);
+  final String? uid;
+  final String? firstname;
+  final String? lastname;
+  final String? email;
+  const AuthBlocLogin(this.uid, this.firstname, this.lastname, this.email);
 }
 
 ///[AutoLoggedState] State that automatically logs a user in the application
 class AutoLoggedState extends AuthBlocLogin {
-  final String uid;
-  const AutoLoggedState(this.uid) : super(uid);
+  final String? uid;
+  final String? firstname;
+  final String? lastname;
+  final String? email;
+  const AutoLoggedState(this.uid, this.firstname, this.lastname, this.email) : super(uid, firstname, lastname, email);
 }
 
 ///[StateErrorSignUp] State when a user Error Occurs

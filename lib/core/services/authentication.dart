@@ -2,6 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthenticationService {
+  /// [AuthenticationService] Creating a singleton for the class above
+  /// This ensures that a class has only one instance and also provides a global point of access to it
+  /// This helps to reduce redudant code and replace it with a single line of code.
+
   AuthenticationService._();
 
   static AuthenticationService? _instance;
@@ -58,7 +62,7 @@ class AuthenticationService {
       final userSnapshot =
           await firebaseFirestore.collection("user").doc(uid).get();
 
-      /// If the user is does not exist or is null,
+      /// [userSnapshot] If the user is does not exist or is null,
       /// Create the new user in the FirebaseFireStore taking the Users uid and phoneNumber
       if (!userSnapshot.exists) {
         await firebaseFirestore
