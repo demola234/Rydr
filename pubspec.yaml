@@ -21,11 +21,13 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   geocoding: ^2.0.0
   geolocator: ^7.2.0+1
+  google_fonts: 2.2.0
   google_maps_flutter: ^2.0.9
   http: ^0.13.3
   location: ^4.3.0
   shared_preferences: ^2.0.6
   sms_autofill: ^2.2.0
+  flutter_svg: ^0.21.0
 
 dev_dependencies:
   flutter_test:

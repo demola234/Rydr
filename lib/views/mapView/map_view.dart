@@ -1,12 +1,13 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rydr/core/bloc/map/bloc/map_bloc.dart';
 import 'package:rydr/core/services/map_services.dart';
 import 'package:rydr/models/address_model.dart';
 import 'package:rydr/utils/custom_text_field.dart';
-
-import 'info_window/custom_info_window.dart';
+import 'package:rydr/views/mapView/info_window/custom_info_window.dart';
 
 class MapView extends StatefulWidget {
   const MapView({Key? key}) : super(key: key);
@@ -16,15 +17,18 @@ class MapView extends StatefulWidget {
 }
 
 class _MapViewState extends State<MapView> {
-  GoogleMapController? _controller;
   final currentAddressController = TextEditingController();
   final destinationAddressController = TextEditingController();
+  GoogleMapController? _controller;
 
   List<Address> searchedAddress = [];
 
   MapBloc bloc = MapBloc();
 
   FocusNode? _focusNode;
+
+  /// [markers] defining a Set of Markers
+  Set<Marker> markers = {};
 
   @override
   void initState() {
@@ -137,20 +141,16 @@ class _MapViewState extends State<MapView> {
                             children: [
                               Row(
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 4.0),
-                                    child: Column(
-                                      children: [
-                                        Icon(Icons.circle,
-                                            size: 16, color: Colors.black),
-                                        Container(
-                                            width: 4,
-                                            height: 40,
-                                            color: Colors.blue),
-                                        Icon(Icons.place, color: Colors.blue),
-                                      ],
-                                    ),
+                                  Column(
+                                    children: [
+                                      Icon(Icons.circle,
+                                          size: 16, color: Colors.blue),
+                                      Container(
+                                          width: 4,
+                                          height: 40,
+                                          color: Colors.blue),
+                                      Icon(Icons.place, color: Colors.blue),
+                                    ],
                                   ),
                                   Expanded(
                                     child: Column(
@@ -261,7 +261,11 @@ class _MapViewState extends State<MapView> {
                   ],
                 );
               } else {
-                return SizedBox.shrink();
+                return SizedBox.shrink(
+                  child: Center(
+                    child: Text("Error"),
+                  ),
+                );
               }
             }),
       ),

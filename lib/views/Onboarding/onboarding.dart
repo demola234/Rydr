@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/models/onboard_model.dart';
+import 'package:rydr/utils/images_path.dart';
+import 'package:rydr/views/Authentication/choose_auth.dart';
 import 'package:rydr/views/Home/home_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -17,26 +21,26 @@ class _OnboardingState extends State<Onboarding> {
 
   List<OnboardModel> screens = <OnboardModel>[
     OnboardModel(
-      // img: 'assets/images/img-1.png',
-      text: "Belajar Dengan Metode Learning by Doing",
+      img: ImagesAsset.PARKING,
+      text: "Enjoy smooth ride",
       desc:
-          "Sebuah metode belajar yang terbuktiampuh dalam meningkatkan produktifitas belajar, Learning by Doing",
+          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
       bg: Colors.white,
       button: Color(0xFF4756DF),
     ),
     OnboardModel(
-      // img: 'assets/images/img-2.png',
-      text: "Dapatkan Kemudahan Akses Kapanpun dan Dimanapun",
+      img: ImagesAsset.MONEY,
+      text: "Enjoy smooth ride",
       desc:
-          "Tidak peduli dimanapun kamu, semua kursus yang telah kamu ikuti bias kamu akses sepenuhnya",
+          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
       bg: Color(0xFF4756DF),
       button: Colors.white,
     ),
     OnboardModel(
-      // img: 'assets/images/img-3.png',
-      text: "Gunakan Fitur Kolaborasi Untuk Pengalaman Lebih",
+      img: ImagesAsset.ACCOMODATION,
+      text: "Enjoy smooth ride",
       desc:
-          "Tersedia fitur Kolaborasi dengan tujuan untuk mengasah skill lebih dalam karena bias belajar bersama",
+          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
       bg: Colors.white,
       button: Color(0xFF4756DF),
     ),
@@ -64,28 +68,9 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: currentIndex % 2 == 0 ? Colors.white : Colors.blue,
-      appBar: AppBar(
-        backgroundColor: currentIndex % 2 == 0 ? Colors.white : Colors.blue,
-        elevation: 0.0,
-        actions: [
-          TextButton(
-            onPressed: () {
-              _storeOnboardInfo();
-              Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => Homeview()));
-            },
-            child: Text(
-              "Skip",
-              style: TextStyle(
-                color: currentIndex % 2 == 0 ? Colors.brown : Colors.white,
-              ),
-            ),
-          )
-        ],
-      ),
+      backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.only(top: 20.0),
         child: PageView.builder(
             itemCount: screens.length,
             controller: _pageController,
@@ -97,94 +82,172 @@ class _OnboardingState extends State<Onboarding> {
             },
             itemBuilder: (_, index) {
               return Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Image.asset(screens[index].img),
+                  SizedBox(height: 80),
                   Container(
-                    height: 10.0,
-                    child: ListView.builder(
-                      itemCount: screens.length,
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.symmetric(horizontal: 3.0),
-                                width: currentIndex == index ? 25 : 8,
-                                height: 8,
-                                decoration: BoxDecoration(
-                                  color: currentIndex == index
-                                      ? Colors.brown
-                                      : Colors.purple,
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
+                    width: 139,
+                    height: 45,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage(ImagesAsset.LOGO))),
+                  ),
+                  SizedBox(height: 30),
+                  Expanded(
+                    child: Stack(children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.contain,
+                                image: AssetImage(ImagesAsset.CITYBG))),
+                      ),
+                      SizedBox(height: 10),
+                      Positioned(
+                        top: 230,
+                        left: MediaQuery.of(context).size.width / 15,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 320,
+                              height: 160,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      fit: BoxFit.contain,
+                                      image: AssetImage(screens[index].img))),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              screens[index].text,
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.poppins(
+                                color: Color(0xFFF3F3C1),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 17.3,
                               ),
-                            ]);
-                      },
-                    ),
-                  ),
-                  Text(
-                    screens[index].text,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 27.0,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Poppins',
-                        color: index % 2 == 0 ? Colors.brown : Colors.white),
-                  ),
-                  Text(
-                    screens[index].desc,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      fontFamily: 'Montserrat',
-                      color: index % 2 == 0 ? Colors.brown : Colors.white,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () async {
-                      print(index);
-                      if (index == screens.length - 1) {
-                        await _storeOnboardInfo();
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Homeview()));
-                      }
-
-                      _pageController.nextPage(
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.bounceIn,
-                      );
-                    },
-                    child: Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
-                      decoration: BoxDecoration(
-                          color: index % 2 == 0 ? Colors.brown : Colors.white,
-                          borderRadius: BorderRadius.circular(15.0)),
-                      child: Row(mainAxisSize: MainAxisSize.min, children: [
-                        Text(
-                          "Next",
-                          style: TextStyle(
-                              fontSize: 16.0,
-                              color:
-                                  index % 2 == 0 ? Colors.white : Colors.blue),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              screens[index].desc,
+                              textAlign: TextAlign.center,
+                              maxLines: 5,
+                              overflow: TextOverflow.clip,
+                              style: GoogleFonts.poppins(
+                                color: Color(0xFFFFFFFF),
+                                fontWeight: FontWeight.w300,
+                                fontSize: 13.6,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Container(
+                              height: 10.0,
+                              child: ListView.builder(
+                                itemCount: screens.length,
+                                shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  return Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.symmetric(
+                                              horizontal: 3.0),
+                                          width: 45,
+                                          height: 1.5,
+                                          decoration: BoxDecoration(
+                                            color: currentIndex == index
+                                                ? Color(0xFF1F2421)
+                                                : Color(0xFFEBEBEB),
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                          ),
+                                        ),
+                                      ]);
+                                },
+                              ),
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                currentIndex != 2
+                                    ? Container(
+                                        child: InkWell(
+                                          onTap: () {
+                                            _storeOnboardInfo();
+                                            Navigator.pushReplacement(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        ChooseAuth()));
+                                          },
+                                          child: Container(
+                                            height: 52,
+                                            width: 93,
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(14.0),
+                                                color: Color(0xFF1F2421)),
+                                            child: Center(
+                                              child: Text(
+                                                "Skip",
+                                                style: GoogleFonts.poppins(
+                                                    color: Color(0xFFFFFFFF)),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    : SizedBox(
+                                        height: 52,
+                                        width: 93,
+                                      ),
+                                SizedBox(
+                                  width: 150,
+                                ),
+                                Container(
+                                  child: InkWell(
+                                    onTap: () async {
+                                      if (index == screens.length - 1) {
+                                        await _storeOnboardInfo();
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ChooseAuth()));
+                                      }
+                                      _pageController.nextPage(
+                                        duration: Duration(milliseconds: 300),
+                                        curve: Curves.easeInOut,
+                                      );
+                                    },
+                                    child: Container(
+                                      height: 61,
+                                      width: 61,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xFF1F2421)),
+                                      child: Center(
+                                          child: SvgPicture.asset(
+                                              ImagesAsset.RIGHTARROW)),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          width: 15.0,
-                        ),
-                        Icon(
-                          Icons.arrow_forward_sharp,
-                          color: index % 2 == 0 ? Colors.white : Colors.blue,
-                        )
-                      ]),
-                    ),
-                  )
+                      ),
+                    ]),
+                  ),
                 ],
               );
             }),

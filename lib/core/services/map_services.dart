@@ -140,7 +140,7 @@ class MapService {
           LatLng(position.latitude, position.longitude));
       currentPosition?.value = address;
 
-      final icon = await getMapIcon("assets/currentLocation.png");
+      final icon = await getMapIcon(ImagesAsset.circlePin);
       addMarker(CodeGenerator.instance!.generateCode('m'),
           currentPosition!.value, icon,
           time: DateTime.now(), type: InfoWindowType.position);
@@ -171,7 +171,7 @@ class MapService {
     markers.value.clear();
 
     var uri = Uri.parse(
-        "$baseUrl?origin=${startLatLng?.latitude},${startLatLng?.longitude}&destination=${endLatLng?.latitude},${endLatLng?.longitude}&key=${"AIzaSyD4HD_NYV3pB-JtvJNBTUFaDFGpWD13fUM"}");
+        "$baseUrl?origin=${startLatLng?.latitude},${startLatLng?.longitude}&destination=${endLatLng?.latitude},${endLatLng?.longitude}&key=${"AIzaSyCmf1sMSwf0pQY9jgnalqCmy52Ti2sc_K8"}");
     http.Response response = await http.get(uri);
     Map values = jsonDecode(response.body);
     final points = values['routes'][0]['overview_polyline']['points'];
