@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
             : Scaffold(
                 body: BlocProvider<AuthBlocBloc>(
                 create: (context) => bloc,
-                child: ChooseAuth(),
+                child: Onboarding(),
               )));
   }
 }

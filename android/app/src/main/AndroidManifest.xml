@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rydr">
+  <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
    <application
         android:label="rydr"
         android:icon="@mipmap/ic_launcher">

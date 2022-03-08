@@ -15,4 +15,11 @@ class ImagesAsset {
   static String PEN = 'assets/pen.svg';
   static String CHECK = 'assets/check.svg';
   static String AUTHIMAGE1 = 'assets/authimage.jpg';
+  static String AUTHIMAGE2 = 'assets/logimage.jpg';
+  static String USERAVATAR = 'assets/defaultavatar.png';
+  static String HOUSE = 'assets/house.png';
+  static String BALL = 'assets/ball.png';
+  static String CAMERA = 'assets/camara.svg';
+    static String faceid = 'assets/faceid.svg';
+  static String finger = 'assets/fingerincon.svg';
 }

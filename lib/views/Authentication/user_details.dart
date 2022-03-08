@@ -39,6 +39,7 @@ class _UserVerificationState extends State<UserVerification> {
   void dispose() {
     super.dispose();
     lastnametexteditingcontroller.dispose();
+    firstnametexteditingcontroller.dispose();
   }
 
   @override

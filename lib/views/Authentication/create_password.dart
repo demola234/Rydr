@@ -3,8 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
-import 'package:rydr/views/Authentication/user_details.dart';
-import 'package:rydr/views/Authentication/verify_otp.dart';
+import 'package:rydr/views/Authentication/user_info.dart';
 
 class PasswordVerification extends StatefulWidget {
   const PasswordVerification({Key? key}) : super(key: key);
@@ -114,7 +113,7 @@ class _PasswordVerificationState extends State<PasswordVerification> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => UserVerification(),
+                                builder: (context) => UserInfo(),
                               ));
                         });
                       }
