@@ -4,7 +4,6 @@ import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/create_password.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
-import 'package:rydr/views/Authentication/verify_otp.dart';
 
 class UserVerification extends StatefulWidget {
   const UserVerification({Key? key}) : super(key: key);

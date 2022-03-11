@@ -16,6 +16,22 @@ class _PasswordVerificationState extends State<PasswordVerification> {
   TextEditingController passwordtexteditingcontroller = TextEditingController();
   String code = "";
   bool isChange = false;
+  bool isPasswordEightCharacters = false;
+  bool hasPasswordOneNumber = false;
+
+  onPasswordChanged(String password) {
+    final numericRegex = RegExp(r'[0-9]');
+
+    setState(() {
+      isPasswordEightCharacters = false;
+      if (passwordtexteditingcontroller.text.length >= 8)
+        isPasswordEightCharacters = true;
+
+      hasPasswordOneNumber = false;
+      if (numericRegex.hasMatch(passwordtexteditingcontroller.text))
+        hasPasswordOneNumber = true;
+    });
+  }
 
   @override
   void initState() {
@@ -89,34 +105,103 @@ class _PasswordVerificationState extends State<PasswordVerification> {
           ),
           YMargin(35),
           CustomTextFieldWidget(
+            onChanged: (password) => onPasswordChanged(password),
             controller: passwordtexteditingcontroller,
             hideText: true,
             keyboardType: TextInputType.visiblePassword,
             autofill: [AutofillHints.password],
             hintText: 'Create password',
           ),
-          YMargin(30),
+          YMargin(10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: Row(
+              children: [
+                AnimatedContainer(
+                    duration: Duration(milliseconds: 200),
+                    decoration: BoxDecoration(),
+                    child: Row(
+                      children: [
+                        Icon(
+                          isPasswordEightCharacters
+                              ? Icons.check
+                              : Icons.cancel_outlined,
+                          color: isPasswordEightCharacters
+                              ? Colors.green
+                              : Colors.red,
+                          size: 10.0,
+                        ),
+                        XMargin(2),
+                        Text(
+                          "6 character long",
+                          style: GoogleFonts.poppins(
+                            color: isPasswordEightCharacters
+                                ? Colors.green
+                                : Colors.red,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 9.0,
+                          ),
+                        )
+                      ],
+                    )),
+                XMargin(10),
+                AnimatedContainer(
+                    duration: Duration(milliseconds: 200),
+                    decoration: BoxDecoration(),
+                    child: Row(
+                      children: [
+                        Icon(
+                          hasPasswordOneNumber
+                              ? Icons.check
+                              : Icons.cancel_outlined,
+                          color:
+                              hasPasswordOneNumber ? Colors.green : Colors.red,
+                          size: 10.0,
+                        ),
+                        XMargin(2),
+                        Text(
+                          "Contains Numberial Figures",
+                          style: GoogleFonts.poppins(
+                            color: hasPasswordOneNumber
+                                ? Colors.green
+                                : Colors.red,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 9.0,
+                          ),
+                        )
+                      ],
+                    ))
+              ],
+            ),
+          ),
+          YMargin(20),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Container(
               height: 50,
               width: context.screenWidth(),
               decoration: BoxDecoration(
-                color: isChange ? Color(0XFF1F2421) : Color(0xFFDCE1DE),
+                color: isPasswordEightCharacters &&
+                        hasPasswordOneNumber &&
+                        isChange
+                    ? Color(0XFF1F2421)
+                    : Color(0xFFDCE1DE),
                 borderRadius: BorderRadius.circular(8.0),
               ),
               child: InkWell(
-                onTap: isChange
-                    ? () {
-                        setState(() {
-                          isChange = false;
-                          Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => UserInfo(),
-                              ));
-                        });
-                      }
+                onTap: isPasswordEightCharacters && hasPasswordOneNumber
+                    ? isChange
+                        ? () {
+                            setState(() {
+                              isChange = false;
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => UserInfo(),
+                                  ));
+                            });
+                          }
+                        : null
                     : null,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

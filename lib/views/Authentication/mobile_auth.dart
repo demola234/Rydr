@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
@@ -157,6 +156,8 @@ class CustomTextFieldWidget extends StatelessWidget {
   final Widget? suffixWidget;
   final bool hideText;
   final Color fillcolour;
+  final  Function(String)? onChanged;
+
 
   const CustomTextFieldWidget({
     Key? key,
@@ -168,6 +169,7 @@ class CustomTextFieldWidget extends StatelessWidget {
     this.hideText: false,
     this.suffixWidget,
     this.fillcolour: const Color(0xFFDCE1DE),
+    this.onChanged
   }) : super(key: key);
 
   final TextEditingController controller;
@@ -178,6 +180,7 @@ class CustomTextFieldWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 30),
       height: 50,
       child: TextField(
+        onChanged: onChanged,
         obscureText: hideText,
         controller: controller,
         cursorColor: Color(0xFF000000),

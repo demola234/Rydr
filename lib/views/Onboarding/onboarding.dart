@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/models/onboard_model.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/views/Authentication/choose_auth.dart';
-import 'package:rydr/views/Home/home_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Onboarding extends StatefulWidget {
@@ -19,33 +18,7 @@ class _OnboardingState extends State<Onboarding> {
 
   late PageController _pageController;
 
-  List<OnboardModel> screens = <OnboardModel>[
-    OnboardModel(
-      img: ImagesAsset.PARKING,
-      text: "Enjoy smooth ride",
-      desc:
-          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-      bg: Colors.white,
-      button: Color(0xFF4756DF),
-    ),
-    OnboardModel(
-      img: ImagesAsset.MONEY,
-      text: "Enjoy smooth ride",
-      desc:
-          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-      bg: Color(0xFF4756DF),
-      button: Colors.white,
-    ),
-    OnboardModel(
-      img: ImagesAsset.ACCOMODATION,
-      text: "Enjoy smooth ride",
-      desc:
-          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-      bg: Colors.white,
-      button: Color(0xFF4756DF),
-    ),
-  ];
-
+  
   @override
   void initState() {
     _pageController = PageController(initialPage: 0);

@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rydr/core/bloc/authentication/bloc/auth_bloc_bloc.dart';
 import 'package:rydr/views/Authentication/choose_auth.dart';
+import 'package:rydr/views/Authentication/create_password.dart';
+import 'package:rydr/views/Home/home_view.dart';
 import 'package:rydr/views/Onboarding/onboarding.dart';
 import 'package:rydr/views/mapView/map_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -54,7 +56,7 @@ class _MyAppState extends State<MyApp> {
             : Scaffold(
                 body: BlocProvider<AuthBlocBloc>(
                 create: (context) => bloc,
-                child: Onboarding(),
+                child: Homeview(),
               )));
   }
 }

@@ -309,9 +309,3 @@ class _LoginScreenState extends State<LoginScreen> {
         onPressed: onClicked,
       );
 }
-
-enum _SupportState {
-  unknown,
-  supported,
-  unsupported,
-}

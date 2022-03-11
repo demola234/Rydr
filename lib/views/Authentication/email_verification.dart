@@ -4,7 +4,7 @@ import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
 import 'package:rydr/views/Authentication/user_details.dart';
-import 'package:rydr/views/Authentication/verify_otp.dart';
+
 
 class EmailVerification extends StatefulWidget {
   const EmailVerification({Key? key}) : super(key: key);
