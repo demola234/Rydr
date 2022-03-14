@@ -8,7 +8,6 @@ import 'Components/rating_card.dart';
 import 'Components/sheet_header.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'drivers_details.dart';
 
 arrivedDestination(BuildContext context) {

@@ -1,12 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rydr/core/bloc/authentication/bloc/auth_bloc_bloc.dart';
-import 'package:rydr/views/Authentication/choose_auth.dart';
-import 'package:rydr/views/Onboarding/onboarding.dart';
 import 'package:rydr/views/splash.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 
 int? isviewed;
 

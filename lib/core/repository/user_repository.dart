@@ -20,6 +20,7 @@ class UserRepo {
   /// [ValueNotifier] that holds a single value.
   /// When [value] is replaced with something that is not equal to the old value as
   /// evaluated by the equality operatorid ==, this class notifies its listeners.
+  /// 
   ValueNotifier<User?> userNotifier = ValueNotifier<User?>(null);
 
   User? get currentUser {
@@ -37,6 +38,7 @@ class UserRepo {
       "isVerified": true
     });
     userNotifier.value = await UserRepo.instance.getUser(uid);
+    return null;
   }
 
   Future<User?> getUser(String? uid) async {

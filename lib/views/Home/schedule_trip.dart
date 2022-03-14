@@ -150,9 +150,9 @@ class _ScheduleTripState extends State<ScheduleTrip> {
               ],
             ),
           ).ripple(() async {
-            final initialDate = DateTime.now();
+            final initialDate = TimeOfDay.now();
             await showTimePicker(
-              initialTime: TimeOfDay.now(),
+              initialTime: initialDate,
               context: context,
               builder: (context, child) {
                 return Theme(

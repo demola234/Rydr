@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -63,7 +64,6 @@ class _HomeviewState extends State<Homeview> {
                 }),
               )
             ],
-            brightness: Brightness.dark,
             centerTitle: false,
             title: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -86,7 +86,7 @@ class _HomeviewState extends State<Homeview> {
                   ),
                 ),
               ],
-            ),
+            ), systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
       drawer: RyderDrawer(),
       body: Stack(

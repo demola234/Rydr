@@ -50,7 +50,7 @@ class _BookingDetialsState extends State<BookingDetials> {
       height: context.screenHeight() / 2.5,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Color(0xFFFFFFFF),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
