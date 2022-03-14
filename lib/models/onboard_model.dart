@@ -18,28 +18,28 @@ class OnboardModel {
 }
 
 List<OnboardModel> screens = <OnboardModel>[
-    OnboardModel(
-      img: ImagesAsset.PARKING,
-      text: "Enjoy smooth ride",
-      desc:
-          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-      bg: Colors.white,
-      button: Color(0xFF4756DF),
-    ),
-    OnboardModel(
-      img: ImagesAsset.MONEY,
-      text: "Enjoy smooth ride",
-      desc:
-          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-      bg: Color(0xFF4756DF),
-      button: Colors.white,
-    ),
-    OnboardModel(
-      img: ImagesAsset.ACCOMODATION,
-      text: "Enjoy smooth ride",
-      desc:
-          "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-      bg: Colors.white,
-      button: Color(0xFF4756DF),
-    ),
-  ];
+  OnboardModel(
+    img: ImagesAsset.parking,
+    text: "Enjoy smooth ride",
+    desc:
+        "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
+    bg: Colors.white,
+    button: Color(0xFF4756DF),
+  ),
+  OnboardModel(
+    img: ImagesAsset.money,
+    text: "Enjoy smooth ride",
+    desc:
+        "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
+    bg: Color(0xFF4756DF),
+    button: Colors.white,
+  ),
+  OnboardModel(
+    img: ImagesAsset.accomodation,
+    text: "Enjoy smooth ride",
+    desc:
+        "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
+    bg: Colors.white,
+    button: Color(0xFF4756DF),
+  ),
+];

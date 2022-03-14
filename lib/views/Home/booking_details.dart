@@ -5,7 +5,8 @@ import 'package:rydr/utils/margins.dart';
 import 'Components/sheet_header.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:rydr/views/Home/Components/home_extention.dart';
+import 'chat_with_driver.dart';
 import 'drivers_details.dart';
 import 'enjoy_ride.dart';
 
@@ -141,7 +142,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                     ],
                   ),
                   InkWell(
-                    onTap: (){
+                    onTap: () {
                       driversDetail(context);
                     },
                     child: Container(
@@ -232,7 +233,13 @@ class _BookingDetialsState extends State<BookingDetials> {
                               Radius.circular(11),
                             )),
                         child: SvgPicture.asset(ImagesAsset.message),
-                      ),
+                      ).ripple(() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ChatWithDriver(),
+                            ));
+                      }),
                       XMargin(5.0),
                       Container(
                         padding: const EdgeInsets.all(15.0),

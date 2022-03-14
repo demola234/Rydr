@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rydr/models/trip_rating.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Home/share_trip.dart';
+import 'Components/rating_card.dart';
 import 'Components/sheet_header.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,7 +12,7 @@ import 'package:flutter_svg/svg.dart';
 import 'drivers_details.dart';
 
 arrivedDestination(BuildContext context) {
-  Navigator.pop(context);
+  // Navigator.pop(context);
   showModalBottomSheet(
       isDismissible: false,
       isScrollControlled: true,
@@ -47,7 +49,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 7),
-      height: context.screenHeight() / 1.8,
+      height: context.screenHeight() / 1.74,
       width: context.screenWidth(),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -268,6 +270,8 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
             ),
             YMargin(14),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "How was your trip?",
@@ -275,6 +279,30 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                     fontSize: 12.0,
                     fontWeight: FontWeight.w700,
                     color: Color(0xFF1F2421),
+                  ),
+                ),
+                YMargin(10.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 75),
+                  child: Container(
+                    height: 40,
+                    // width: context.screenWidth(),
+                    child: ListView(
+                      physics: NeverScrollableScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      children: RatingData.rideDetails
+                          .map((rideDetails) => RideRating(
+                              rideModel: rideDetails,
+                              onSelected: (model) {
+                                setState(() {
+                                  RatingData.rideDetails.forEach((item) {
+                                    item.isSelected = false;
+                                  });
+                                  model.isSelected = true;
+                                });
+                              }))
+                          .toList(),
+                    ),
                   ),
                 ),
               ],

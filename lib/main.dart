@@ -4,15 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rydr/core/bloc/authentication/bloc/auth_bloc_bloc.dart';
 import 'package:rydr/views/Authentication/choose_auth.dart';
-import 'package:rydr/views/Authentication/create_password.dart';
-import 'package:rydr/views/Home/home_view.dart';
 import 'package:rydr/views/Onboarding/onboarding.dart';
-import 'package:rydr/views/mapView/map_view.dart';
+import 'package:rydr/views/splash.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 int? isviewed;
 
-void main() async {
+ main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
@@ -20,8 +18,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  final prefs = await SharedPreferences.getInstance();
-  isviewed = prefs.getInt('onBoarding');
   runApp(MyApp());
 }
 
@@ -51,12 +47,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: 'Rydr Hailing Application',
         debugShowCheckedModeBanner: false,
-        home: isviewed != 0
-            ? Onboarding()
-            : Scaffold(
-                body: BlocProvider<AuthBlocBloc>(
-                create: (context) => bloc,
-                child: Homeview(),
-              )));
+        home: SplashScreen());
   }
 }

@@ -18,7 +18,6 @@ class _OnboardingState extends State<Onboarding> {
 
   late PageController _pageController;
 
-  
   @override
   void initState() {
     _pageController = PageController(initialPage: 0);
@@ -63,7 +62,7 @@ class _OnboardingState extends State<Onboarding> {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             fit: BoxFit.contain,
-                            image: AssetImage(ImagesAsset.LOGO))),
+                            image: AssetImage(ImagesAsset.logo))),
                   ),
                   SizedBox(height: 30),
                   Expanded(
@@ -72,7 +71,7 @@ class _OnboardingState extends State<Onboarding> {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 fit: BoxFit.contain,
-                                image: AssetImage(ImagesAsset.CITYBG))),
+                                image: AssetImage(ImagesAsset.citybg))),
                       ),
                       SizedBox(height: 10),
                       Positioned(
@@ -210,7 +209,7 @@ class _OnboardingState extends State<Onboarding> {
                                           color: Color(0xFF1F2421)),
                                       child: Center(
                                           child: SvgPicture.asset(
-                                              ImagesAsset.RIGHTARROW)),
+                                              ImagesAsset.rightarrow)),
                                     ),
                                   ),
                                 )

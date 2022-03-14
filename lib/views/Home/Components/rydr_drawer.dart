@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
+import 'package:rydr/views/Authentication/login_screen.dart';
+import 'package:rydr/views/Home/Components/home_extention.dart';
+import 'package:rydr/views/Home/chat_with_driver.dart';
+import 'package:rydr/views/Notifications/notifications.dart';
+import 'package:rydr/views/Payment/Coupons/apply_coupons.dart';
 import 'package:rydr/views/Payment/payment.dart';
-
+import 'package:rydr/views/Settings/manage_password.dart';
+import 'package:rydr/views/Support/support.dart';
+import 'package:rydr/views/TripHistory/trip_screen.dart';
 
 class RyderDrawer extends StatelessWidget {
   const RyderDrawer({
@@ -76,7 +83,7 @@ class RyderDrawer extends StatelessWidget {
                               ],
                             ),
                           ),
-                        ),
+                        ).ripple(() {}),
                       ),
                     ])),
                   ],
@@ -93,10 +100,17 @@ class RyderDrawer extends StatelessWidget {
                   child: Column(children: [
                     DrawerListTile(
                       title: 'Your Trip History',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TripScreen(),
+                            ));
+                      },
                     ),
                     DrawerListTile(
-                      title: 'Payment ',
+                      title: 'Payment',
                       onPressed: () {
                         Navigator.of(context).pop();
                         Navigator.push(
@@ -108,23 +122,58 @@ class RyderDrawer extends StatelessWidget {
                     ),
                     DrawerListTile(
                       title: 'Notifications',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Notifications(),
+                            ));
+                      },
                     ),
                     DrawerListTile(
-                      title: 'Earnings',
-                      onPressed: () {},
+                      title: 'Apply Coupon',
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ApplyCoupon(),
+                            ));
+                      },
                     ),
                     DrawerListTile(
                       title: 'Support',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Support(),
+                            ));
+                      },
                     ),
                     DrawerListTile(
-                      title: 'About',
-                      onPressed: () {},
+                      title: 'Manage Password',
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ManagePassword(),
+                            ));
+                      },
                     ),
                     DrawerListTile(
-                      title: 'Settings',
-                      onPressed: () {},
+                      title: 'About us',
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ChatWithDriver(),
+                            ));
+                      },
                     ),
                   ]),
                 ),
@@ -180,23 +229,27 @@ class RyderDrawer extends StatelessWidget {
                       color: Color(0xFFFF2E2E),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Log out",
-                            style: GoogleFonts.poppins(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                            ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Log out",
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
-                ),
+                ).ripple(() {
+                  Navigator.of(context).pop();
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ));
+                }),
                 YMargin(10),
                 Spacer()
               ],

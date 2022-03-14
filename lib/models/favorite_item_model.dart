@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 import 'package:rydr/utils/images_path.dart';
 
 class FavoriteItems {

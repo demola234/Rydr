@@ -3,11 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
+import 'package:rydr/views/Authentication/components/auth_header.dart';
 import 'package:rydr/views/Authentication/email_verification.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
 
 class VerifyOtp extends StatefulWidget {
-  String phonenumber;
+  final String phonenumber;
 
   VerifyOtp({required this.phonenumber, Key? key}) : super(key: key);
 
@@ -23,30 +24,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
         backgroundColor: Colors.white,
         body: Column(children: [
           YMargin(60),
-          Center(
-            child: Container(
-              alignment: Alignment.center,
-              width: 105,
-              height: 33,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.contain,
-                  image: AssetImage(ImagesAsset.LOGO),
-                ),
-              ),
-            ),
-          ),
-          YMargin(30),
-          Container(
-            width: context.screenWidth(),
-            height: 160,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.contain,
-                    image: AssetImage(
-                      ImagesAsset.AUTHIMAGE1,
-                    ))),
-          ),
+          authHeader(context),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -75,14 +53,14 @@ class _VerifyOtpState extends State<VerifyOtp> {
                   children: [
                     Row(
                       children: [
-                        SvgPicture.asset(ImagesAsset.CHECK),
+                        SvgPicture.asset(ImagesAsset.check),
                         Text("+234" + widget.phonenumber,
                             style: GoogleFonts.montserrat(
                               fontWeight: FontWeight.w500,
                               color: Color(0xFF878E88),
                               fontSize: 9.0,
                             )),
-                        SvgPicture.asset(ImagesAsset.PEN),
+                        SvgPicture.asset(ImagesAsset.pen),
                       ],
                     ),
                     Container(
@@ -111,16 +89,26 @@ class _VerifyOtpState extends State<VerifyOtp> {
                 fontSize: 9.0,
               )),
           YMargin(8.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              buildCodeNumberBox(code.length > 0 ? code.substring(0, 1) : ""),
-              buildCodeNumberBox(code.length > 1 ? code.substring(1, 2) : ""),
-              buildCodeNumberBox(code.length > 2 ? code.substring(2, 3) : ""),
-              buildCodeNumberBox(code.length > 3 ? code.substring(3, 4) : ""),
-              buildCodeNumberBox(code.length > 4 ? code.substring(4, 5) : ""),
-              buildCodeNumberBox(code.length > 5 ? code.substring(5, 6) : ""),
-            ],
+          SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Spacer(),
+                buildCodeNumberBox(
+                    code.length > 0 ? code.substring(0, 1) : ""),
+                buildCodeNumberBox(
+                    code.length > 1 ? code.substring(1, 2) : ""),
+                buildCodeNumberBox(
+                    code.length > 2 ? code.substring(2, 3) : ""),
+                buildCodeNumberBox(
+                    code.length > 3 ? code.substring(3, 4) : ""),
+                buildCodeNumberBox(
+                    code.length > 4 ? code.substring(4, 5) : ""),
+                buildCodeNumberBox(
+                    code.length > 5 ? code.substring(5, 6) : ""),
+                Spacer(),
+              ],
+            ),
           ),
           YMargin(15),
           Expanded(
@@ -154,29 +142,28 @@ class _VerifyOtpState extends State<VerifyOtp> {
 
   Widget buildCodeNumberBox(String codeNumber) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 4),
-      child: SizedBox(
-        width: 47,
-        height: 44,
-        child: Container(
-          decoration: BoxDecoration(
-              color: Color(0xFF878E88).withOpacity(0.3),
-              borderRadius: BorderRadius.all(
-                Radius.circular(5),
-              ),
-              border: Border.all(color: Color(0xFF878E88), width: 0.5)),
-          child: Center(
-            child: Text(
-              codeNumber,
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1F1F1F),
+        padding: EdgeInsets.symmetric(horizontal: 4),
+        child: SizedBox(
+          width: 47,
+          height: 44,
+          child: Container(
+            decoration: BoxDecoration(
+                color: Color(0xFF878E88).withOpacity(0.3),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(5),
+                ),
+                border: Border.all(color: Color(0xFF878E88), width: 0.5)),
+            child: Center(
+              child: Text(
+                codeNumber,
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF1F1F1F),
+                ),
               ),
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
