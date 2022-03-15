@@ -8,10 +8,11 @@ import 'Components/rating_card.dart';
 import 'Components/sheet_header.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:rydr/utils/colors.dart';
 import 'drivers_details.dart';
 
 arrivedDestination(BuildContext context) {
-  // Navigator.pop(context);
+  Navigator.pop(context);
   showModalBottomSheet(
       isDismissible: false,
       isScrollControlled: true,
@@ -51,7 +52,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
       height: context.screenHeight() / 1.74,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -67,7 +68,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
               style: GoogleFonts.montserrat(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w500,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             Text(
@@ -75,12 +76,12 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
               style: GoogleFonts.montserrat(
                 fontSize: 11.0,
                 fontWeight: FontWeight.w300,
-                color: Color(0xFF50555C),
+                color: ColorPath.offBlack,
               ),
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -99,7 +100,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(10),
@@ -131,7 +132,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                                     style: GoogleFonts.montserrat(
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFF1F2421),
+                                      color: ColorPath.Primarydark,
                                     ),
                                   ),
                                   Row(
@@ -141,7 +142,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                                         style: GoogleFonts.montserrat(
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w400,
-                                          color: Color(0xFF1F2421),
+                                          color: ColorPath.Primarydark,
                                         ),
                                       ),
                                       Text(
@@ -149,7 +150,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                                         style: GoogleFonts.montserrat(
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: Color(0xFF1F2421),
+                                          color: ColorPath.Primarydark,
                                         ),
                                       ),
                                     ],
@@ -168,7 +169,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                                   style: GoogleFonts.montserrat(
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w700,
-                                    color: Color(0xFF1F2421),
+                                    color: ColorPath.Primarydark,
                                   ),
                                 ),
                                 Text(
@@ -176,7 +177,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                                   style: GoogleFonts.montserrat(
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w400,
-                                    color: Color(0xFF1F2421),
+                                    color: ColorPath.Primarydark,
                                   ),
                                 ),
                               ])
@@ -189,7 +190,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -205,7 +206,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                     style: GoogleFonts.montserrat(
                       fontSize: 9.0,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF50555C),
+                      color: ColorPath.offBlack,
                     ),
                   ),
                   YMargin(5),
@@ -224,7 +225,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(5),
@@ -242,7 +243,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(5),
@@ -251,7 +252,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w300,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                         ],
@@ -263,7 +264,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -277,7 +278,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                   style: GoogleFonts.montserrat(
                     fontSize: 12.0,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xFF1F2421),
+                    color: ColorPath.Primarydark,
                   ),
                 ),
                 YMargin(10.0),
@@ -313,7 +314,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                 height: 40,
                 width: context.screenWidth(),
                 decoration: BoxDecoration(
-                  color: Color(0xFF1F2421),
+                  color: ColorPath.Primarydark,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: InkWell(
@@ -324,7 +325,7 @@ class _ArrivedDestinationState extends State<ArrivedDestination> {
                       Text(
                         "Share your info",
                         style: GoogleFonts.poppins(
-                          color: Colors.white,
+                          color: ColorPath.Primarywhite,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

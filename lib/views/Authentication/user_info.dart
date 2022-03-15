@@ -5,6 +5,7 @@ import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/forget_password.dart';
 import 'package:rydr/views/Authentication/login_screen.dart';
+import 'package:rydr/utils/colors.dart';
 
 class UserInfo extends StatefulWidget {
   const UserInfo({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _UserInfoState extends State<UserInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorPath.Primarywhite,
       body: FadeInDown(
         duration: Duration(milliseconds: 2000),
         child: Column(children: [
@@ -73,7 +74,7 @@ class _UserInfoState extends State<UserInfo> {
                     ),
                     child: Icon(
                       Icons.camera_alt_rounded,
-                      color: Colors.white,
+                      color: ColorPath.Primarywhite,
                       size: 16,
                     ),
                   ),
@@ -86,7 +87,7 @@ class _UserInfoState extends State<UserInfo> {
               textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.normal,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
                 fontSize: 14,
               )),
           YMargin(25),
@@ -95,19 +96,19 @@ class _UserInfoState extends State<UserInfo> {
             textAlign: TextAlign.center,
             style: GoogleFonts.montserrat(
               fontWeight: FontWeight.w500,
-              color: Color(0xFF1F2421),
+              color: ColorPath.Primarydark,
               fontSize: 23,
             ),
           ),
           YMargin(20),
           favoritecard(
-            ImagesAsset.ball,
+            "🏀",
             "Set your Favoutite Locations",
             "Save more time when booking ride",
           ),
           YMargin(10),
           favoritecard(
-            ImagesAsset.house,
+            "🏠",
             "Set your Home Address",
             "Quick access to your home address",
           ),
@@ -129,7 +130,7 @@ class _UserInfoState extends State<UserInfo> {
                     width: 110,
                     height: 30,
                     decoration: BoxDecoration(
-                      color: Color(0xFFDCE1DE),
+                      color: ColorPath.Primaryfield,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Center(
@@ -137,7 +138,7 @@ class _UserInfoState extends State<UserInfo> {
                         "Skip",
                         style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                           fontSize: 12,
                         ),
                       ),
@@ -156,7 +157,7 @@ class _UserInfoState extends State<UserInfo> {
                     width: 110,
                     height: 30,
                     decoration: BoxDecoration(
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Center(
@@ -164,7 +165,7 @@ class _UserInfoState extends State<UserInfo> {
                         "Proceed",
                         style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFFFFFFFF),
+                          color: ColorPath.Primarywhite,
                           fontSize: 12,
                         ),
                       ),
@@ -185,10 +186,10 @@ class _UserInfoState extends State<UserInfo> {
       child: Container(
           height: 60,
           decoration: BoxDecoration(
-            color: Color(0xFFDCE1DE),
+            color: ColorPath.Primaryfield,
             border: Border.all(
               width: 0.5,
-              color: Color(0xFF878E88),
+              color: ColorPath.PrimaryColor,
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -202,10 +203,22 @@ class _UserInfoState extends State<UserInfo> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                      height: 30,
-                      width: 30,
-                      child:
-                          Image(fit: BoxFit.contain, image: AssetImage(image))),
+                    height: 30,
+                    width: 30,
+                    decoration: BoxDecoration(
+                      color: ColorPath.Primarydark.withOpacity(0.29),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Text(
+                        image,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
                   XMargin(5.0),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -214,13 +227,13 @@ class _UserInfoState extends State<UserInfo> {
                       Text(text1,
                           style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                             fontSize: 12,
                           )),
                       Text(text2,
                           style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF878E88),
+                            color: ColorPath.PrimaryColor,
                             fontSize: 10,
                           )),
                     ],
@@ -230,7 +243,7 @@ class _UserInfoState extends State<UserInfo> {
               Icon(
                 Icons.arrow_forward_ios,
                 size: 15,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ],
           )),

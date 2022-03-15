@@ -7,7 +7,7 @@ import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
-
+import 'package:rydr/utils/colors.dart';
 import 'add_payment_method.dart';
 
 class Payments extends StatefulWidget {
@@ -43,7 +43,7 @@ class _PaymentsState extends State<Payments> {
                     height: 122,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xFF1F2421),
+                        color: ColorPath.Primarydark,
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage(ImagesAsset.paybg),
@@ -57,7 +57,7 @@ class _PaymentsState extends State<Payments> {
                           style: GoogleFonts.montserrat(
                             fontSize: 15.0,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFFF3F3C1),
+                            color: ColorPath.SecondaryColor,
                           ),
                         ),
                         YMargin(10),
@@ -66,7 +66,7 @@ class _PaymentsState extends State<Payments> {
                           style: GoogleFonts.montserrat(
                             fontSize: 36.0,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFFF3F3C1),
+                            color: ColorPath.SecondaryColor,
                           ),
                         ),
                       ],
@@ -90,7 +90,7 @@ class _PaymentsState extends State<Payments> {
                         style: GoogleFonts.montserrat(
                           fontSize: 20.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -100,7 +100,7 @@ class _PaymentsState extends State<Payments> {
                 Container(
                   height: 85,
                   width: context.screenWidth(),
-                  decoration: BoxDecoration(color: Color(0xFF1F2421)),
+                  decoration: BoxDecoration(color: ColorPath.Primarydark),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -114,7 +114,7 @@ class _PaymentsState extends State<Payments> {
                             style: GoogleFonts.montserrat(
                               fontSize: 13.0,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFFF3F3C1),
+                              color: ColorPath.SecondaryColor,
                             ),
                           ),
                         ],
@@ -122,7 +122,7 @@ class _PaymentsState extends State<Payments> {
                       Row(
                         children: [
                           Radio(
-                            activeColor: Color(0xFFF3F3C1),
+                            activeColor: ColorPath.SecondaryColor,
                             value: "cash",
                             onChanged: (value) {
                               setState(() {
@@ -141,7 +141,7 @@ class _PaymentsState extends State<Payments> {
                 Container(
                   height: 52,
                   width: context.screenWidth(),
-                  decoration: BoxDecoration(color: Color(0xFFDCE1DE)),
+                  decoration: BoxDecoration(color: ColorPath.Primaryfield),
                   child: Row(
                     children: [
                       XMargin(20),
@@ -149,13 +149,13 @@ class _PaymentsState extends State<Payments> {
                         width: 25,
                         height: 25,
                         decoration: BoxDecoration(
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                           shape: BoxShape.circle,
                         ),
                         child: Icon(
                           Icons.add,
                           size: 15,
-                          color: Color(0xFFDCE1DE),
+                          color: ColorPath.Primaryfield,
                         ),
                       ),
                       XMargin(10),
@@ -164,7 +164,7 @@ class _PaymentsState extends State<Payments> {
                         style: GoogleFonts.montserrat(
                           fontSize: 13.0,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -183,7 +183,7 @@ class _PaymentsState extends State<Payments> {
                         style: GoogleFonts.montserrat(
                           fontSize: 20.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -203,7 +203,7 @@ class _PaymentsState extends State<Payments> {
                     height: 50,
                     width: context.screenWidth(),
                     decoration: BoxDecoration(
-                      color: Color(0XFF1F2421),
+                      color: ColorPath.Secondarygrey,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: InkWell(
@@ -214,7 +214,7 @@ class _PaymentsState extends State<Payments> {
                           Text(
                             "Apply Coupon Code",
                             style: GoogleFonts.poppins(
-                              color: Colors.white,
+                              color: ColorPath.Primarywhite,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -242,7 +242,8 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        backgroundColor: Color(0xFF1F2421),
+        brightness: Brightness.dark,
+        backgroundColor: ColorPath.Primarydark,
         automaticallyImplyLeading: false,
         centerTitle: true,
         leadingWidth: 67,
@@ -251,7 +252,7 @@ class CustomAppBar extends StatelessWidget {
           style: GoogleFonts.montserrat(
             fontSize: 18.0,
             fontWeight: FontWeight.w400,
-            color: Colors.white,
+            color: ColorPath.Primarywhite,
           ),
         ),
         leading: Padding(
@@ -264,16 +265,17 @@ class CustomAppBar extends StatelessWidget {
               width: 45,
               height: 45,
               decoration: BoxDecoration(
-                  color: Color(0xFFDCE1DE),
+                  color: ColorPath.Primaryfield,
                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
               child: Center(
                   child: Icon(
                 Icons.arrow_back_ios,
                 size: 18,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               )),
             ),
           ),
-        ), systemOverlayStyle: SystemUiOverlayStyle.light);
+        ),
+        systemOverlayStyle: SystemUiOverlayStyle.light);
   }
 }

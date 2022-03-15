@@ -5,6 +5,7 @@ import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/components/auth_header.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
 import 'package:rydr/views/Authentication/user_details.dart';
+import 'package:rydr/utils/colors.dart';
 
 class EmailVerification extends StatefulWidget {
   const EmailVerification({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class _EmailVerificationState extends State<EmailVerification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorPath.Primarywhite,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -67,7 +68,7 @@ class _EmailVerificationState extends State<EmailVerification> {
                         "Let’s know you",
                         style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                           fontSize: 23,
                         ),
                       ),
@@ -75,14 +76,14 @@ class _EmailVerificationState extends State<EmailVerification> {
                       Text("What is your email address?",
                           style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.normal,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                             fontSize: 14,
                           )),
                       YMargin(3.0),
                       Text("Make sure you enter a correct Email Address",
                           style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF878E88),
+                            color: ColorPath.PrimaryColor,
                             fontSize: 9.0,
                           )),
                     ],
@@ -103,8 +104,8 @@ class _EmailVerificationState extends State<EmailVerification> {
                       width: context.screenWidth(),
                       decoration: BoxDecoration(
                         color: isValid && isChange
-                            ? Color(0XFF1F2421)
-                            : Color(0xFFDCE1DE),
+                            ? ColorPath.Secondarygrey
+                            : ColorPath.Primaryfield,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: InkWell(
@@ -129,7 +130,7 @@ class _EmailVerificationState extends State<EmailVerification> {
                             Text(
                               "Next",
                               style: GoogleFonts.poppins(
-                                color: Colors.white,
+                                color: ColorPath.Primarywhite,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),

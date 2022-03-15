@@ -6,6 +6,7 @@ import 'package:rydr/utils/margins.dart';
 import 'Components/sheet_header.dart';
 import 'booking_comfirm.dart';
 import 'build_select_ride.dart';
+import 'package:rydr/utils/colors.dart';
 
 buildTripDetails(BuildContext context) {
   Navigator.pop(context);
@@ -22,7 +23,7 @@ buildTripDetails(BuildContext context) {
           height: context.screenHeight() / 2.5,
           width: context.screenWidth(),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: ColorPath.Primarywhite,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(15),
               topRight: Radius.circular(15),
@@ -38,7 +39,7 @@ buildTripDetails(BuildContext context) {
                   style: GoogleFonts.montserrat(
                     fontSize: 20.0,
                     fontWeight: FontWeight.w500,
-                    color: Color(0xFF1F2421),
+                    color: ColorPath.Primarydark,
                   ),
                 ),
                 Text(
@@ -46,12 +47,12 @@ buildTripDetails(BuildContext context) {
                   style: GoogleFonts.montserrat(
                     fontSize: 11.0,
                     fontWeight: FontWeight.w300,
-                    color: Color(0xFF50555C),
+                    color: ColorPath.offBlack,
                   ),
                 ),
                 YMargin(10),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -66,7 +67,7 @@ buildTripDetails(BuildContext context) {
                 ),
                 YMargin(15),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -86,7 +87,7 @@ buildTripDetails(BuildContext context) {
                     height: 50,
                     width: context.screenWidth(),
                     decoration: BoxDecoration(
-                      color: Color(0xFF20C462),
+                      color: ColorPath.Primarygreen,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: InkWell(
@@ -106,7 +107,7 @@ buildTripDetails(BuildContext context) {
                                 height: context.screenHeight() / 2,
                                 width: context.screenWidth(),
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: ColorPath.Primarywhite,
                                   borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(15),
                                     topRight: Radius.circular(15),
@@ -122,7 +123,7 @@ buildTripDetails(BuildContext context) {
                                         style: GoogleFonts.montserrat(
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.w500,
-                                          color: Color(0xFF1F2421),
+                                          color: ColorPath.Primarydark,
                                         ),
                                       ),
                                       Text(
@@ -130,12 +131,12 @@ buildTripDetails(BuildContext context) {
                                         style: GoogleFonts.montserrat(
                                           fontSize: 11.0,
                                           fontWeight: FontWeight.w300,
-                                          color: Color(0xFF50555C),
+                                          color: ColorPath.offBlack,
                                         ),
                                       ),
                                       YMargin(10),
                                       DotWidget(
-                                        dashColor: Color(0xFFDCE1DE),
+                                        dashColor: ColorPath.Primaryfield,
                                         dashHeight: 1.0,
                                         dashWidth: 2.0,
                                       ),
@@ -148,7 +149,7 @@ buildTripDetails(BuildContext context) {
                                           height: 40,
                                           width: context.screenWidth(),
                                           decoration: BoxDecoration(
-                                            color: Color(0xFF1F2421),
+                                            color: ColorPath.Primarydark,
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                           ),
@@ -163,7 +164,8 @@ buildTripDetails(BuildContext context) {
                                                 Text(
                                                   "Book Rydr",
                                                   style: GoogleFonts.poppins(
-                                                    color: Colors.white,
+                                                    color:
+                                                        ColorPath.Primarywhite,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                                 ),
@@ -184,7 +186,7 @@ buildTripDetails(BuildContext context) {
                           Text(
                             "Confirm",
                             style: GoogleFonts.poppins(
-                              color: Colors.white,
+                              color: ColorPath.Primarywhite,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -234,7 +236,7 @@ Widget tripdetails(
                   style: GoogleFonts.montserrat(
                     fontSize: 12.0,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF000000).withOpacity(0.5),
+                    color: ColorPath.Primaryblack.withOpacity(0.5),
                   ),
                 ),
                 YMargin(10),
@@ -266,7 +268,7 @@ Widget tripdetails(
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  color: Color(0xFF1F2421),
+                  color: ColorPath.Primarydark,
                   borderRadius: BorderRadius.circular(7.0)),
               child: Row(
                 children: [
@@ -281,7 +283,7 @@ Widget tripdetails(
                     style: GoogleFonts.montserrat(
                       fontSize: 11.0,
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFFDCE1DE),
+                      color: ColorPath.Primaryfield,
                     ),
                   )
                 ],

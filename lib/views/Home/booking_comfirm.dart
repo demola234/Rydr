@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:rydr/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,7 +52,7 @@ class _BookingComfirmState extends State<BookingComfirm> {
       height: context.screenHeight() / 3,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -68,7 +68,7 @@ class _BookingComfirmState extends State<BookingComfirm> {
               style: GoogleFonts.montserrat(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w500,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             Text(
@@ -76,12 +76,12 @@ class _BookingComfirmState extends State<BookingComfirm> {
               style: GoogleFonts.montserrat(
                 fontSize: 11.0,
                 fontWeight: FontWeight.w300,
-                color: Color(0xFF50555C),
+                color: ColorPath.offBlack,
               ),
             ),
             YMargin(10),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -118,7 +118,7 @@ class _BookingComfirmState extends State<BookingComfirm> {
                         style: GoogleFonts.montserrat(
                           fontSize: 10.0,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       )
                     ],
@@ -133,7 +133,7 @@ class _BookingComfirmState extends State<BookingComfirm> {
                           height: 50,
                           width: 50,
                           decoration: BoxDecoration(
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                               borderRadius: BorderRadius.all(
                                 Radius.circular(11),
                               )),
@@ -145,7 +145,7 @@ class _BookingComfirmState extends State<BookingComfirm> {
                           style: GoogleFonts.montserrat(
                             fontSize: 10.0,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                           ),
                         )
                       ],

@@ -1,11 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/create_password.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
-
+import 'package:rydr/utils/colors.dart';
 import 'components/auth_header.dart';
 
 class UserVerification extends StatefulWidget {
@@ -47,7 +46,7 @@ class _UserVerificationState extends State<UserVerification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorPath.Primarywhite,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -63,7 +62,7 @@ class _UserVerificationState extends State<UserVerification> {
                         "Let’s know you",
                         style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                           fontSize: 23,
                         ),
                       ),
@@ -71,7 +70,7 @@ class _UserVerificationState extends State<UserVerification> {
                       Text("Please enter your correct names for identification",
                           style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.normal,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                             fontSize: 14,
                           )),
                     ],
@@ -97,7 +96,9 @@ class _UserVerificationState extends State<UserVerification> {
                       height: 50,
                       width: context.screenWidth(),
                       decoration: BoxDecoration(
-                        color: isChange ? Color(0XFF1F2421) : Color(0xFFDCE1DE),
+                        color: isChange
+                            ? ColorPath.Secondarygrey
+                            : ColorPath.Primaryfield,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: InkWell(
@@ -120,7 +121,7 @@ class _UserVerificationState extends State<UserVerification> {
                             Text(
                               "Next",
                               style: GoogleFonts.poppins(
-                                color: Colors.white,
+                                color: ColorPath.Primarywhite,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),

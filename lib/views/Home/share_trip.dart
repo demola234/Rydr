@@ -5,6 +5,7 @@ import 'package:rydr/utils/margins.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rydr/utils/colors.dart';
 
 final CameraPosition _kLake = CameraPosition(
   target: LatLng(8.479879, 4.541814),
@@ -42,7 +43,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
       height: context.screenHeight() / 1.7,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -62,7 +63,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                   height: 30,
                   width: 30,
                   decoration: BoxDecoration(
-                      color: Colors.white, shape: BoxShape.circle),
+                      color: ColorPath.Primarywhite, shape: BoxShape.circle),
                   child: Icon(Icons.cancel_outlined),
                 ),
               ),
@@ -84,7 +85,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                         style: GoogleFonts.montserrat(
                           fontSize: 20.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -92,7 +93,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                 ),
                 YMargin(14),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -113,7 +114,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                 ),
                 YMargin(14),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -129,7 +130,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(5),
@@ -148,7 +149,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 9.0,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xFF50555C),
+                                  color: ColorPath.offBlack,
                                 ),
                               ),
                               YMargin(5),
@@ -166,7 +167,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 9.0,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xFF50555C),
+                                  color: ColorPath.offBlack,
                                 ),
                               ),
                               YMargin(5),
@@ -175,7 +176,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 9.0,
                                   fontWeight: FontWeight.w300,
-                                  color: Color(0xFF50555C),
+                                  color: ColorPath.offBlack,
                                 ),
                               ),
                             ],
@@ -187,7 +188,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                 ),
                 YMargin(14),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -199,7 +200,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                     height: 40,
                     width: context.screenWidth(),
                     decoration: BoxDecoration(
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: InkWell(
@@ -210,7 +211,7 @@ class _ShareTripInfoState extends State<ShareTripInfo> {
                           Text(
                             "Share your info",
                             style: GoogleFonts.poppins(
-                              color: Colors.white,
+                              color: ColorPath.Primarywhite,
                               fontWeight: FontWeight.w500,
                             ),
                           ),

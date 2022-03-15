@@ -126,7 +126,7 @@
 //                       child: SafeArea(
 //                         child: Container(
 //                           decoration: BoxDecoration(
-//                             color: Colors.white,
+//                             color: ColorPath.Primarywhite,
 //                             borderRadius: BorderRadius.circular(6),
 //                             boxShadow: [
 //                               BoxShadow(

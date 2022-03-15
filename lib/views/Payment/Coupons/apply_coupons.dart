@@ -6,6 +6,7 @@ import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
 import 'package:rydr/views/Payment/payment.dart';
+import 'package:rydr/utils/colors.dart';
 
 class ApplyCoupon extends StatelessWidget {
   final TextEditingController coupontextEditingController =
@@ -38,7 +39,7 @@ class ApplyCoupon extends StatelessWidget {
                   height: 50,
                   width: context.screenWidth(),
                   decoration: BoxDecoration(
-                    color: Color(0XFF1F2421),
+                    color: ColorPath.Secondarygrey,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: InkWell(
@@ -49,7 +50,7 @@ class ApplyCoupon extends StatelessWidget {
                         Text(
                           "Apply Coupon Code",
                           style: GoogleFonts.poppins(
-                            color: Colors.white,
+                            color: ColorPath.Primarywhite,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -84,10 +85,10 @@ class ApplyCoupon extends StatelessWidget {
                     height: 120,
                     width: context.screenWidth(),
                     decoration: BoxDecoration(
-                        color: Color(0XFFF5B74C),
+                        color: ColorPath.GoldenColor,
                         borderRadius: BorderRadius.circular(15.0),
                         border: Border.all(
-                            color: Color(0xFF1F2421).withOpacity(0.3))),
+                            color: ColorPath.Primarydark.withOpacity(0.3))),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -103,7 +104,7 @@ class ApplyCoupon extends StatelessWidget {
                             Text(
                               "🎉Congratulations!",
                               style: GoogleFonts.poppins(
-                                color: Color(0xFF1F2421),
+                                color: ColorPath.Primarydark,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -112,7 +113,7 @@ class ApplyCoupon extends StatelessWidget {
                             Text(
                               "You have gotten 10% free Coupon \nfor our next trip.",
                               style: GoogleFonts.poppins(
-                                color: Color(0xFFFFFFFF),
+                                color: ColorPath.Primarywhite,
                                 fontSize: 10,
                                 fontWeight: FontWeight.w300,
                               ),
@@ -147,7 +148,7 @@ class ApplyCoupon extends StatelessWidget {
                             Text(
                               "😱Covid 19 Coupon!",
                               style: GoogleFonts.poppins(
-                                color: Color(0xFF1F2421),
+                                color: ColorPath.Primarydark,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -156,7 +157,7 @@ class ApplyCoupon extends StatelessWidget {
                             Text(
                               "Get 60% off your next trip due to the \npandemic!",
                               style: GoogleFonts.poppins(
-                                color: Color(0xFFFFFFFF),
+                                color: ColorPath.Primarywhite,
                                 fontSize: 10,
                                 fontWeight: FontWeight.w300,
                               ),

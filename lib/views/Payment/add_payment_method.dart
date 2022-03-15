@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Payment/payment.dart';
+import 'package:rydr/utils/colors.dart';
 
 class AddPaymethod extends StatefulWidget {
   const AddPaymethod({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class _AddPaymethodState extends State<AddPaymethod> {
                     style: GoogleFonts.montserrat(
                       fontSize: 11.0,
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                     ),
                   ),
                 ],
@@ -48,8 +49,8 @@ class _AddPaymethodState extends State<AddPaymethod> {
               width: context.screenWidth(),
               decoration: BoxDecoration(
                 color: payment == "cash"
-                    ? Color(0xFF1F2421)
-                    : Color(0xFFF3F3C1).withOpacity(0.3),
+                    ? ColorPath.Primarydark
+                    : ColorPath.SecondaryColor.withOpacity(0.3),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,8 +61,8 @@ class _AddPaymethodState extends State<AddPaymethod> {
                       SvgPicture.asset(
                         ImagesAsset.money1,
                         color: payment == "cash"
-                            ? Color(0xFFF3F3C1)
-                            : Color(0xFF1F2421),
+                            ? ColorPath.SecondaryColor
+                            : ColorPath.Primarydark,
                       ),
                       XMargin(10),
                       Text(
@@ -70,8 +71,8 @@ class _AddPaymethodState extends State<AddPaymethod> {
                           fontSize: 13.0,
                           fontWeight: FontWeight.w600,
                           color: payment != "cash"
-                              ? Color(0xFF1F2421)
-                              : Color(0xFFF3F3C1),
+                              ? ColorPath.Primarydark
+                              : ColorPath.SecondaryColor,
                         ),
                       ),
                     ],
@@ -79,7 +80,7 @@ class _AddPaymethodState extends State<AddPaymethod> {
                   Row(
                     children: [
                       Radio(
-                        activeColor: Color(0xFFF3F3C1),
+                        activeColor: ColorPath.SecondaryColor,
                         value: "cash",
                         onChanged: (value) {
                           setState(() {
@@ -99,8 +100,8 @@ class _AddPaymethodState extends State<AddPaymethod> {
               width: context.screenWidth(),
               decoration: BoxDecoration(
                 color: payment != "cash"
-                    ? Color(0xFF1F2421)
-                    : Color(0xFFF3F3C1).withOpacity(0.3),
+                    ? ColorPath.Primarydark
+                    : ColorPath.SecondaryColor.withOpacity(0.3),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -111,8 +112,8 @@ class _AddPaymethodState extends State<AddPaymethod> {
                       SvgPicture.asset(
                         ImagesAsset.card,
                         color: payment != "cash"
-                            ? Color(0xFFF3F3C1)
-                            : Color(0xFF1F2421),
+                            ? ColorPath.SecondaryColor
+                            : ColorPath.Primarydark,
                       ),
                       XMargin(10),
                       Text(
@@ -121,8 +122,8 @@ class _AddPaymethodState extends State<AddPaymethod> {
                           fontSize: 13.0,
                           fontWeight: FontWeight.w600,
                           color: payment != "cash"
-                              ? Color(0xFFF3F3C1)
-                              : Color(0xFF1F2421),
+                              ? ColorPath.SecondaryColor
+                              : ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -130,7 +131,7 @@ class _AddPaymethodState extends State<AddPaymethod> {
                   Row(
                     children: [
                       Radio(
-                        activeColor: Color(0xFFF3F3C1),
+                        activeColor: ColorPath.SecondaryColor,
                         value: "card",
                         onChanged: (value) {
                           setState(() {

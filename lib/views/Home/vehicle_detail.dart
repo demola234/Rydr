@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'Components/sheet_header.dart';
-
+import 'package:rydr/utils/colors.dart';
 
 vehicleDetails(BuildContext context) {
   showModalBottomSheet(
@@ -35,7 +35,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
       height: context.screenHeight() / 2,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -62,7 +62,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
               style: GoogleFonts.montserrat(
                 fontSize: 15.0,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             YMargin(20),
@@ -71,7 +71,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
               child: Container(
                   height: 40,
                   decoration: BoxDecoration(
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                       borderRadius: BorderRadius.circular(7.0)),
                   child: Center(
                     child: Text(
@@ -80,7 +80,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                       style: GoogleFonts.montserrat(
                           fontSize: 8.0,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xFFF3F3C1)),
+                          color: ColorPath.SecondaryColor),
                     ),
                   )),
             ),
@@ -98,7 +98,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       Text(
@@ -106,7 +106,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -121,7 +121,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       Text(
@@ -129,7 +129,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -144,7 +144,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       Text(
@@ -152,7 +152,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -169,7 +169,7 @@ class _VehiclesDetailsState extends State<VehiclesDetails> {
                 style: GoogleFonts.montserrat(
                     fontSize: 10.0,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF1F2421)),
+                    color: ColorPath.Primarydark),
               ),
             ),
           ],

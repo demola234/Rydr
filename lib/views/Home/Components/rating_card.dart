@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/models/trip_rating.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
+import 'package:rydr/utils/colors.dart';
 
 class RideRating extends StatefulWidget {
   final TripRating rideModel;
@@ -26,8 +27,8 @@ class _RideRatingState extends State<RideRating> {
         width: 40,
         decoration: BoxDecoration(
           color: widget.rideModel.isSelected
-              ? Color(0xFF1F2421)
-              : Color(0xFF1F2421).withOpacity(0.29),
+              ? ColorPath.Primarydark
+              : ColorPath.Primarydark.withOpacity(0.29),
           shape: BoxShape.circle,
         ),
         child: Center(

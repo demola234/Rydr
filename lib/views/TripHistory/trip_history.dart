@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/views/Home/build_trip_details.dart';
+import 'package:rydr/utils/colors.dart';
 import 'package:rydr/views/Payment/payment.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
@@ -16,7 +17,7 @@ class TripHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     final CameraPosition _kLake = CameraPosition(
       target: LatLng(8.479879, 4.541814),
-      zoom: 24,
+      zoom: 30,
     );
 
     return Scaffold(
@@ -58,7 +59,7 @@ class TripHistory extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                       fontSize: 9.0,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF50555C),
+                      color: ColorPath.offBlack,
                     ),
                   ),
                   YMargin(5),
@@ -77,7 +78,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(5),
@@ -95,7 +96,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(5),
@@ -104,7 +105,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w300,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                         ],
@@ -119,7 +120,7 @@ class TripHistory extends StatelessWidget {
           FadeInUp(
             duration: Duration(milliseconds: 1600),
             child: DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -142,7 +143,7 @@ class TripHistory extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(10),
@@ -151,7 +152,7 @@ class TripHistory extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 12.0,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       Row(
@@ -161,7 +162,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 10.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                           Text(
@@ -169,7 +170,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 10.0,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                         ],
@@ -179,7 +180,7 @@ class TripHistory extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 10.0,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -202,7 +203,7 @@ class TripHistory extends StatelessWidget {
           FadeInUp(
             duration: Duration(milliseconds: 1800),
             child: DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -221,7 +222,7 @@ class TripHistory extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                       fontSize: 9.0,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF50555C),
+                      color: ColorPath.offBlack,
                     ),
                   ),
                   YMargin(10),
@@ -232,7 +233,7 @@ class TripHistory extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 12.0,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       XMargin(8.0),
@@ -240,10 +241,11 @@ class TripHistory extends StatelessWidget {
                         width: 47,
                         height: 18,
                         decoration: BoxDecoration(
-                            color: Color(0xFFDCE1DE).withOpacity(0.47),
+                            color: ColorPath.Primaryfield.withOpacity(0.47),
                             borderRadius: BorderRadius.circular(2),
                             border: Border.all(
-                                color: Color(0xFF878E88)..withOpacity(0.5))),
+                                color: ColorPath.PrimaryColor
+                                  ..withOpacity(0.5))),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -255,7 +257,7 @@ class TripHistory extends StatelessWidget {
                               style: GoogleFonts.montserrat(
                                 fontSize: 9.0,
                                 fontWeight: FontWeight.w300,
-                                color: Color(0xFF50555C),
+                                color: ColorPath.offBlack,
                               ),
                             ),
                           ],
@@ -271,7 +273,7 @@ class TripHistory extends StatelessWidget {
           FadeInUp(
             duration: Duration(milliseconds: 2000),
             child: DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -290,7 +292,7 @@ class TripHistory extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                       fontSize: 9.0,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF50555C),
+                      color: ColorPath.offBlack,
                     ),
                   ),
                   YMargin(10),
@@ -312,7 +314,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 12.0,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                           YMargin(8.0),
@@ -321,7 +323,7 @@ class TripHistory extends StatelessWidget {
                             style: GoogleFonts.montserrat(
                               fontSize: 8.0,
                               fontWeight: FontWeight.w300,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                         ],
@@ -336,7 +338,7 @@ class TripHistory extends StatelessWidget {
           FadeInUp(
             duration: Duration(milliseconds: 2200),
             child: DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -350,7 +352,7 @@ class TripHistory extends StatelessWidget {
                 height: 50,
                 width: context.screenWidth(),
                 decoration: BoxDecoration(
-                  color: Color(0XFF1F2421),
+                  color: ColorPath.Secondarygrey,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: InkWell(
@@ -361,7 +363,7 @@ class TripHistory extends StatelessWidget {
                       Text(
                         "Share Ryde Information",
                         style: GoogleFonts.poppins(
-                          color: Color(0xFFF3F3C1),
+                          color: ColorPath.SecondaryColor,
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                         ),

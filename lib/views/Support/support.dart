@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Home/build_trip_details.dart';
+import 'package:rydr/utils/colors.dart';
 import 'package:rydr/views/Payment/payment.dart';
 
 class Support extends StatelessWidget {
@@ -13,7 +14,7 @@ class Support extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorPath.Primarywhite,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
         child: CustomAppBar(title: "Support"),
@@ -25,7 +26,7 @@ class Support extends StatelessWidget {
             padding: EdgeInsets.only(left: 10, right: 10),
             margin: EdgeInsets.only(left: 10, right: 10),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: ColorPath.Primarywhite,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15))),
@@ -38,7 +39,7 @@ class Support extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFF1F2421)),
+                        color: ColorPath.Primarydark),
                   ),
                   const YMargin(15),
                   Text(
@@ -46,26 +47,26 @@ class Support extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                       fontSize: 13,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF878E88),
+                      color: ColorPath.PrimaryColor,
                     ),
                   ),
                   const YMargin(10),
                   FadeInUp(
                     duration: Duration(milliseconds: 1800),
                     child: DotWidget(
-                      dashColor: Color(0xFFDCE1DE),
+                      dashColor: ColorPath.Primaryfield,
                       dashHeight: 1.0,
                       dashWidth: 2.0,
                     ),
                   ),
                   const YMargin(15),
                   Card(
-                      color: Color(0xFFDCE1DE).withOpacity(0.5),
+                      color: ColorPath.Primaryfield.withOpacity(0.5),
                       elevation: 0,
                       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                       shape: RoundedRectangleBorder(
                           side: new BorderSide(
-                              color: Color(0xFF878E88).withOpacity(0.6)),
+                              color: ColorPath.PrimaryColor.withOpacity(0.6)),
                           borderRadius: BorderRadius.circular(10.0)),
                       child: Column(children: [
                         ListTile(
@@ -78,12 +79,12 @@ class Support extends StatelessWidget {
                           title: Text(
                             "FAQ",
                             style: GoogleFonts.montserrat(
-                                fontSize: 13, color: Color(0xFF1F2421)),
+                                fontSize: 13, color: ColorPath.Primarydark),
                           ),
                           subtitle: Text(
                             "Question and answer about Banc",
                             style: TextStyle(
-                                fontSize: 10, color: Color(0xFF878E88)),
+                                fontSize: 10, color: ColorPath.PrimaryColor),
                           ),
                           trailing:
                               Icon(Icons.arrow_forward_ios_outlined, size: 10),
@@ -99,12 +100,12 @@ class Support extends StatelessWidget {
                           title: Text(
                             "Technical Support",
                             style: GoogleFonts.montserrat(
-                                fontSize: 13, color: Color(0xFF1F2421)),
+                                fontSize: 13, color: ColorPath.Primarydark),
                           ),
                           subtitle: Text(
                             "Tell us how we can help you",
                             style: GoogleFonts.montserrat(
-                                fontSize: 10, color: Color(0xFF878E88)),
+                                fontSize: 10, color: ColorPath.PrimaryColor),
                           ),
                           trailing:
                               Icon(Icons.arrow_forward_ios_outlined, size: 10),
@@ -118,12 +119,12 @@ class Support extends StatelessWidget {
                           title: Text(
                             "Chat live",
                             style: TextStyle(
-                                fontSize: 13, color: Color(0xFF1F2421)),
+                                fontSize: 13, color: ColorPath.Primarydark),
                           ),
                           subtitle: Text(
                             "Communicate with our customer service live",
                             style: GoogleFonts.montserrat(
-                                fontSize: 10, color: Color(0xFF878E88)),
+                                fontSize: 10, color: ColorPath.PrimaryColor),
                           ),
                           trailing:
                               Icon(Icons.arrow_forward_ios_outlined, size: 10),
@@ -142,5 +143,5 @@ Widget _buildDivider() {
       margin: EdgeInsets.symmetric(horizontal: 8.0),
       width: double.infinity - 10,
       height: 1,
-      color: Color(0xFF878E88).withOpacity(0.6));
+      color: ColorPath.PrimaryColor.withOpacity(0.6));
 }

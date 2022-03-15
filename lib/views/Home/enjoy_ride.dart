@@ -6,7 +6,7 @@ import 'Components/sheet_header.dart';
 import 'arrived_destination.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:rydr/utils/colors.dart';
 import 'drivers_details.dart';
 
 buildEnjoyRide(BuildContext context) {
@@ -50,7 +50,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
       height: context.screenHeight() / 1.8,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -66,7 +66,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
               style: GoogleFonts.montserrat(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w500,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             Text(
@@ -74,12 +74,12 @@ class _EnjoyRideState extends State<EnjoyRide> {
               style: GoogleFonts.montserrat(
                 fontSize: 11.0,
                 fontWeight: FontWeight.w300,
-                color: Color(0xFF50555C),
+                color: ColorPath.offBlack,
               ),
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -98,7 +98,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(10),
@@ -130,7 +130,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                                     style: GoogleFonts.montserrat(
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFF1F2421),
+                                      color: ColorPath.Primarydark,
                                     ),
                                   ),
                                   Row(
@@ -140,7 +140,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                                         style: GoogleFonts.montserrat(
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w400,
-                                          color: Color(0xFF1F2421),
+                                          color: ColorPath.Primarydark,
                                         ),
                                       ),
                                       Text(
@@ -148,7 +148,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                                         style: GoogleFonts.montserrat(
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: Color(0xFF1F2421),
+                                          color: ColorPath.Primarydark,
                                         ),
                                       ),
                                     ],
@@ -167,7 +167,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                                   style: GoogleFonts.montserrat(
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w700,
-                                    color: Color(0xFF1F2421),
+                                    color: ColorPath.Primarydark,
                                   ),
                                 ),
                                 Text(
@@ -175,7 +175,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                                   style: GoogleFonts.montserrat(
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w400,
-                                    color: Color(0xFF1F2421),
+                                    color: ColorPath.Primarydark,
                                   ),
                                 ),
                               ])
@@ -188,7 +188,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -204,7 +204,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                     style: GoogleFonts.montserrat(
                       fontSize: 9.0,
                       fontWeight: FontWeight.w300,
-                      color: Color(0xFF50555C),
+                      color: ColorPath.offBlack,
                     ),
                   ),
                   YMargin(5),
@@ -223,7 +223,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(5),
@@ -241,7 +241,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(5),
@@ -250,7 +250,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w300,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                         ],
@@ -262,7 +262,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -280,7 +280,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(10),
@@ -299,7 +299,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                             style: GoogleFonts.montserrat(
                               fontSize: 9.0,
                               fontWeight: FontWeight.w300,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                         ],
@@ -313,7 +313,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(10),
@@ -356,7 +356,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                 height: 40,
                 width: context.screenWidth(),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFF2E2E),
+                  color: ColorPath.Primaryred,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: InkWell(
@@ -367,7 +367,7 @@ class _EnjoyRideState extends State<EnjoyRide> {
                       Text(
                         "Canel Ride",
                         style: GoogleFonts.poppins(
-                          color: Colors.white,
+                          color: ColorPath.Primarywhite,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

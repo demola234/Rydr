@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rydr/utils/colors.dart';
 import 'package:rydr/utils/images_path.dart';
 
 class OnboardModel {
@@ -23,7 +24,7 @@ List<OnboardModel> screens = <OnboardModel>[
     text: "Enjoy smooth ride",
     desc:
         "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-    bg: Colors.white,
+    bg: ColorPath.Primarywhite,
     button: Color(0xFF4756DF),
   ),
   OnboardModel(
@@ -32,14 +33,14 @@ List<OnboardModel> screens = <OnboardModel>[
     desc:
         "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
     bg: Color(0xFF4756DF),
-    button: Colors.white,
+    button: ColorPath.Primarywhite,
   ),
   OnboardModel(
     img: ImagesAsset.accomodation,
     text: "Enjoy smooth ride",
     desc:
         "We have varieties of cars available for you\n with luxury features to ensure you have a \nperfect ride.",
-    bg: Colors.white,
+    bg: ColorPath.Primarywhite,
     button: Color(0xFF4756DF),
   ),
 ];

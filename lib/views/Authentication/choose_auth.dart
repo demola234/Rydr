@@ -6,6 +6,7 @@ import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/components/auth_header.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
+import 'package:rydr/utils/colors.dart';
 
 class ChooseAuth extends StatelessWidget {
   const ChooseAuth({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class ChooseAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorPath.Primarywhite,
         body: SafeArea(
             child: FadeInDown(
           duration: Duration(milliseconds: 3000),
@@ -33,7 +34,7 @@ class ChooseAuth extends StatelessWidget {
                         "Enjoy a new car \nhailing experience",
                         style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                           fontSize: 26,
                         ),
                       ),
@@ -41,7 +42,7 @@ class ChooseAuth extends StatelessWidget {
                       Text(
                         "Amazing Experience with top notch \ncab services",
                         style: GoogleFonts.montserrat(
-                          color: Color(0xFF878E88),
+                          color: ColorPath.PrimaryColor,
                           fontWeight: FontWeight.w400,
                           fontSize: 12,
                         ),
@@ -53,26 +54,26 @@ class ChooseAuth extends StatelessWidget {
                 Column(
                   children: [
                     AuthButtons(
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                       text: "Continue with Email",
                       icon: ImagesAsset.envelope,
-                      textcolor: Colors.white,
+                      textcolor: ColorPath.Primarywhite,
                       bordercolor: Colors.transparent,
                     ),
                     YMargin(10),
                     AuthButtons(
-                      color: Colors.white,
+                      color: ColorPath.Primarywhite,
                       text: "Continue with Google",
                       icon: ImagesAsset.google,
-                      textcolor: Color(0xFF212F20),
-                      bordercolor: Color(0xFF212F20),
+                      textcolor: ColorPath.Secondarydark,
+                      bordercolor: ColorPath.Secondarydark,
                     ),
                     YMargin(10),
                     AuthButtons(
-                      color: Color(0xFF4267B2),
+                      color: ColorPath.Primaryblue,
                       text: "Continue with Facebook",
                       icon: ImagesAsset.facebookb,
-                      textcolor: Color(0xFFFFFFFF),
+                      textcolor: ColorPath.Primarywhite,
                       bordercolor: Colors.transparent,
                     )
                   ],
@@ -87,7 +88,7 @@ class ChooseAuth extends StatelessWidget {
                           text: "By continuing, you are acknowledging \nour ",
                           style: GoogleFonts.montserrat(
                             fontSize: 12,
-                            color: Color(0xFF878E88),
+                            color: ColorPath.PrimaryColor,
                           ),
                         ),
                         TextSpan(
@@ -100,7 +101,7 @@ class ChooseAuth extends StatelessWidget {
                           text: "and ",
                           style: GoogleFonts.montserrat(
                             fontSize: 12,
-                            color: Color(0xFF878E88),
+                            color: ColorPath.PrimaryColor,
                           ),
                         ),
                         TextSpan(

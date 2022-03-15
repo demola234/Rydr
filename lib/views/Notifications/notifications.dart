@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Payment/payment.dart';
+import 'package:rydr/utils/colors.dart';
 
 class Notifications extends StatelessWidget {
   Notifications({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class Notifications extends StatelessWidget {
                     height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5.0),
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                     ),
                     child: Center(
                       child: Text(
@@ -36,7 +37,7 @@ class Notifications extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFFF3F3C1),
+                          color: ColorPath.SecondaryColor,
                         ),
                       ),
                     ),
@@ -71,7 +72,7 @@ class Notifications extends StatelessWidget {
         width: context.screenWidth(),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
-          color: Color(0xFFDCE1DE),
+          color: ColorPath.Primaryfield,
         ),
         child: Row(
           children: [
@@ -88,7 +89,7 @@ class Notifications extends StatelessWidget {
                   style: GoogleFonts.montserrat(
                     fontSize: 10.0,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF1F2421),
+                    color: ColorPath.Primarydark,
                   ),
                 ),
                 YMargin(5),
@@ -97,7 +98,7 @@ class Notifications extends StatelessWidget {
                   style: GoogleFonts.montserrat(
                     fontSize: 7.0,
                     fontWeight: FontWeight.w300,
-                    color: Color(0xFF1F2421),
+                    color: ColorPath.Primarydark,
                   ),
                 )
               ],

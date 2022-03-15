@@ -4,6 +4,7 @@ import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:rydr/utils/colors.dart';
 
 driversDetail(BuildContext context) {
   showModalBottomSheet(
@@ -35,7 +36,7 @@ class _DriversDetailState extends State<DriversDetail> {
       height: context.screenHeight() / 1.2,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -55,7 +56,7 @@ class _DriversDetailState extends State<DriversDetail> {
                   height: 30,
                   width: 30,
                   decoration: BoxDecoration(
-                      color: Colors.white, shape: BoxShape.circle),
+                      color: ColorPath.Primarywhite, shape: BoxShape.circle),
                   child: Icon(Icons.cancel_outlined),
                 ),
               ),
@@ -80,12 +81,12 @@ class _DriversDetailState extends State<DriversDetail> {
                   style: GoogleFonts.montserrat(
                     fontSize: 15.0,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF1F2421),
+                    color: ColorPath.Primarydark,
                   ),
                 ),
                 YMargin(15),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -100,7 +101,7 @@ class _DriversDetailState extends State<DriversDetail> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(15),
@@ -124,7 +125,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF1F2421),
+                                  color: ColorPath.Primarydark,
                                 ),
                               ),
                             ],
@@ -146,7 +147,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF1F2421),
+                                  color: ColorPath.Primarydark,
                                 ),
                               ),
                             ],
@@ -170,27 +171,27 @@ class _DriversDetailState extends State<DriversDetail> {
                                       Icon(
                                         Icons.star,
                                         size: 13,
-                                        color: Color(0xFF1F2421),
+                                        color: ColorPath.Primarydark,
                                       ),
                                       Icon(
                                         Icons.star,
                                         size: 13,
-                                        color: Color(0xFF1F2421),
+                                        color: ColorPath.Primarydark,
                                       ),
                                       Icon(
                                         Icons.star,
                                         size: 13,
-                                        color: Color(0xFF1F2421),
+                                        color: ColorPath.Primarydark,
                                       ),
                                       Icon(
                                         Icons.star,
                                         size: 13,
-                                        color: Color(0xFF1F2421),
+                                        color: ColorPath.Primarydark,
                                       ),
                                       Icon(
                                         Icons.star,
                                         size: 13,
-                                        color: Color(0xFF878E88),
+                                        color: ColorPath.PrimaryColor,
                                       ),
                                     ],
                                   ),
@@ -199,7 +200,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                     style: GoogleFonts.montserrat(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.w600,
-                                      color: Color(0xFF1F2421),
+                                      color: ColorPath.Primarydark,
                                     ),
                                   ),
                                 ],
@@ -213,7 +214,7 @@ class _DriversDetailState extends State<DriversDetail> {
                 ),
                 YMargin(14),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -232,7 +233,7 @@ class _DriversDetailState extends State<DriversDetail> {
                             style: GoogleFonts.montserrat(
                               fontSize: 11.0,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(9),
@@ -254,7 +255,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF1F2421),
+                                  color: ColorPath.Primarydark,
                                 ),
                               ),
                             ],
@@ -278,7 +279,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF1F2421),
+                                  color: ColorPath.Primarydark,
                                 ),
                               ),
                             ],
@@ -302,7 +303,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 style: GoogleFonts.montserrat(
                                   fontSize: 13.0,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF1F2421),
+                                  color: ColorPath.Primarydark,
                                 ),
                               ),
                             ],
@@ -316,7 +317,7 @@ class _DriversDetailState extends State<DriversDetail> {
                             style: GoogleFonts.montserrat(
                               fontSize: 11.0,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(9),
@@ -327,7 +328,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 height: 45,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                    color: Color(0xFF1F2421),
+                                    color: ColorPath.Primarydark,
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(11),
                                     )),
@@ -339,7 +340,7 @@ class _DriversDetailState extends State<DriversDetail> {
                                 height: 45,
                                 width: 45,
                                 decoration: BoxDecoration(
-                                    color: Color(0xFF1F2421),
+                                    color: ColorPath.Primarydark,
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(11),
                                     )),
@@ -355,7 +356,7 @@ class _DriversDetailState extends State<DriversDetail> {
                 ),
                 YMargin(14),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -370,7 +371,7 @@ class _DriversDetailState extends State<DriversDetail> {
                         style: GoogleFonts.montserrat(
                           fontSize: 11.0,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                     ],

@@ -4,10 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:rydr/core/bloc/authentication/bloc/auth_bloc_bloc.dart';
 import 'package:rydr/views/splash.dart';
 
-
 int? isviewed;
 
- main() async {
+main() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   ));
@@ -44,6 +43,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: 'Rydr Hailing Application',
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.light,
+        ),
         home: SplashScreen());
   }
 }

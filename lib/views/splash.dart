@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'Authentication/choose_auth.dart';
 import 'Onboarding/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,10 +26,10 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     getAuth();
     Timer(
-        Duration(seconds: 3),
+        Duration(milliseconds: 2500),
         () => Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) {
-              return isviewed != 0 ? Onboarding() : ChooseAuth();
+              return isviewed != 0 ? Onboarding() : Onboarding();
             })));
   }
 
@@ -48,8 +46,8 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Align(
               alignment: Alignment.center,
               child: Container(
-                width: 212,
-                height: 67,
+                width: 106,
+                height: 33,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                   fit: BoxFit.cover,

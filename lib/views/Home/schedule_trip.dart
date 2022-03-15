@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
 import 'Components/sheet_header.dart';
+import 'package:rydr/utils/colors.dart';
 import 'build_trip_details.dart';
 
 scheduleTrip(BuildContext context) {
@@ -33,7 +34,7 @@ class _ScheduleTripState extends State<ScheduleTrip> {
         height: context.screenHeight() / 3,
         width: context.screenWidth(),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: ColorPath.Primarywhite,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(15),
             topRight: Radius.circular(15),
@@ -48,7 +49,7 @@ class _ScheduleTripState extends State<ScheduleTrip> {
             style: GoogleFonts.montserrat(
               fontSize: 20.0,
               fontWeight: FontWeight.w500,
-              color: Color(0xFF1F2421),
+              color: ColorPath.Primarydark,
             ),
           ),
           Text(
@@ -56,12 +57,12 @@ class _ScheduleTripState extends State<ScheduleTrip> {
             style: GoogleFonts.montserrat(
               fontSize: 11.0,
               fontWeight: FontWeight.w300,
-              color: Color(0xFF50555C),
+              color: ColorPath.offBlack,
             ),
           ),
           YMargin(10),
           DotWidget(
-            dashColor: Color(0xFFDCE1DE),
+            dashColor: ColorPath.Primaryfield,
             dashHeight: 1.0,
             dashWidth: 2.0,
           ),
@@ -74,7 +75,7 @@ class _ScheduleTripState extends State<ScheduleTrip> {
                   style: GoogleFonts.montserrat(
                     fontSize: 11.0,
                     fontWeight: FontWeight.w300,
-                    color: Color(0xFF50555C),
+                    color: ColorPath.offBlack,
                   ),
                 ),
                 YMargin(10),
@@ -83,12 +84,12 @@ class _ScheduleTripState extends State<ScheduleTrip> {
                   style: GoogleFonts.montserrat(
                     fontSize: 13.0,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF878E88),
+                    color: ColorPath.PrimaryColor,
                   ),
                 ),
                 YMargin(10),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -102,13 +103,13 @@ class _ScheduleTripState extends State<ScheduleTrip> {
                 return Theme(
                   data: Theme.of(context).copyWith(
                     colorScheme: ColorScheme.light(
-                      primary: Color(0xFF1F2421),
-                      onPrimary: Colors.white,
-                      onSurface: Color(0xFF1F2421),
+                      primary: ColorPath.Primarydark,
+                      onPrimary: ColorPath.Primarywhite,
+                      onSurface: ColorPath.Primarydark,
                     ),
                     textButtonTheme: TextButtonThemeData(
                       style: TextButton.styleFrom(
-                        primary: Color(0xFF878E88),
+                        primary: ColorPath.PrimaryColor,
                       ),
                     ),
                   ),
@@ -129,7 +130,7 @@ class _ScheduleTripState extends State<ScheduleTrip> {
                   style: GoogleFonts.montserrat(
                     fontSize: 11.0,
                     fontWeight: FontWeight.w300,
-                    color: Color(0xFF50555C),
+                    color: ColorPath.offBlack,
                   ),
                 ),
                 YMargin(10),
@@ -138,12 +139,12 @@ class _ScheduleTripState extends State<ScheduleTrip> {
                   style: GoogleFonts.montserrat(
                     fontSize: 13.0,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xFF878E88),
+                    color: ColorPath.PrimaryColor,
                   ),
                 ),
                 YMargin(10),
                 DotWidget(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -158,13 +159,13 @@ class _ScheduleTripState extends State<ScheduleTrip> {
                 return Theme(
                   data: Theme.of(context).copyWith(
                     colorScheme: ColorScheme.light(
-                      primary: Color(0xFF1F2421),
-                      onPrimary: Colors.white,
-                      onSurface: Color(0xFF1F2421),
+                      primary: ColorPath.Primarydark,
+                      onPrimary: ColorPath.Primarywhite,
+                      onSurface: ColorPath.Primarydark,
                     ),
                     textButtonTheme: TextButtonThemeData(
                       style: TextButton.styleFrom(
-                        primary: Color(0xFF878E88),
+                        primary: ColorPath.PrimaryColor,
                       ),
                     ),
                   ),

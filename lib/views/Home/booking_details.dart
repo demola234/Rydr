@@ -6,6 +6,7 @@ import 'Components/sheet_header.dart';
 import 'build_trip_details.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
+import 'package:rydr/utils/colors.dart';
 import 'chat_with_driver.dart';
 import 'drivers_details.dart';
 import 'enjoy_ride.dart';
@@ -50,7 +51,7 @@ class _BookingDetialsState extends State<BookingDetials> {
       height: context.screenHeight() / 2.5,
       width: context.screenWidth(),
       decoration: BoxDecoration(
-        color: Color(0xFFFFFFFF),
+        color: ColorPath.Primarywhite,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
@@ -66,7 +67,7 @@ class _BookingDetialsState extends State<BookingDetials> {
               style: GoogleFonts.montserrat(
                 fontSize: 20.0,
                 fontWeight: FontWeight.w500,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             Text(
@@ -74,12 +75,12 @@ class _BookingDetialsState extends State<BookingDetials> {
               style: GoogleFonts.montserrat(
                 fontSize: 11.0,
                 fontWeight: FontWeight.w300,
-                color: Color(0xFF50555C),
+                color: ColorPath.offBlack,
               ),
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -99,7 +100,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(10),
@@ -108,7 +109,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                         style: GoogleFonts.montserrat(
                           fontSize: 12.0,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       Row(
@@ -118,7 +119,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                             style: GoogleFonts.montserrat(
                               fontSize: 10.0,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                           Text(
@@ -126,7 +127,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                             style: GoogleFonts.montserrat(
                               fontSize: 10.0,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                         ],
@@ -136,7 +137,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                         style: GoogleFonts.montserrat(
                           fontSize: 10.0,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                     ],
@@ -158,7 +159,7 @@ class _BookingDetialsState extends State<BookingDetials> {
             ),
             YMargin(14),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -178,7 +179,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                         style: GoogleFonts.montserrat(
                           fontSize: 9.0,
                           fontWeight: FontWeight.w300,
-                          color: Color(0xFF50555C),
+                          color: ColorPath.offBlack,
                         ),
                       ),
                       YMargin(5.0),
@@ -187,34 +188,34 @@ class _BookingDetialsState extends State<BookingDetials> {
                           Icon(
                             Icons.star,
                             size: 13,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                           ),
                           Icon(
                             Icons.star,
                             size: 13,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                           ),
                           Icon(
                             Icons.star,
                             size: 13,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                           ),
                           Icon(
                             Icons.star,
                             size: 13,
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                           ),
                           Icon(
                             Icons.star,
                             size: 13,
-                            color: Color(0xFF878E88),
+                            color: ColorPath.PrimaryColor,
                           ),
                           Text(
                             "4.7",
                             style: GoogleFonts.montserrat(
                               fontSize: 12.0,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                         ],
@@ -228,7 +229,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                         height: 50,
                         width: 50,
                         decoration: BoxDecoration(
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                             borderRadius: BorderRadius.all(
                               Radius.circular(11),
                             )),
@@ -246,7 +247,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                         height: 50,
                         width: 50,
                         decoration: BoxDecoration(
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                             borderRadius: BorderRadius.all(
                               Radius.circular(11),
                             )),
@@ -260,7 +261,7 @@ class _BookingDetialsState extends State<BookingDetials> {
             ),
             YMargin(10.0),
             DotWidget(
-              dashColor: Color(0xFFDCE1DE),
+              dashColor: ColorPath.Primaryfield,
               dashHeight: 1.0,
               dashWidth: 2.0,
             ),
@@ -293,7 +294,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                 height: 40,
                 width: context.screenWidth(),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFF2E2E),
+                  color: ColorPath.Primaryred,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: InkWell(
@@ -304,7 +305,7 @@ class _BookingDetialsState extends State<BookingDetials> {
                       Text(
                         "Canel Ride",
                         style: GoogleFonts.poppins(
-                          color: Colors.white,
+                          color: ColorPath.Primarywhite,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

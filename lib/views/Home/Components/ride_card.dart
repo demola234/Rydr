@@ -5,7 +5,7 @@ import 'package:rydr/models/ride_model.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
-
+import 'package:rydr/utils/colors.dart';
 import '../vehicle_detail.dart';
 
 class RideCard extends StatefulWidget {
@@ -32,8 +32,8 @@ class _RideCardState extends State<RideCard> {
       },
       child: Container(
         color: widget.rideModel.isSelected
-            ? Color(0xFF1F2421)
-            : Color(0xFFF3F3C1).withOpacity(0.3),
+            ? ColorPath.Primarydark
+            : ColorPath.SecondaryColor.withOpacity(0.3),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,15 +59,15 @@ class _RideCardState extends State<RideCard> {
                         fontSize: 15.0,
                         fontWeight: FontWeight.w700,
                         color: widget.rideModel.isSelected
-                            ? Color(0xFFF3F3C1)
-                            : Color(0xFF1F2421),
+                            ? ColorPath.SecondaryColor
+                            : ColorPath.Primarydark,
                       ),
                     ),
                     Icon(
                       Icons.info_outline,
                       color: widget.rideModel.isSelected
-                          ? Color(0xFFF3F3C1)
-                          : Color(0xFF1F2421),
+                          ? ColorPath.SecondaryColor
+                          : ColorPath.Primarydark,
                       size: 8,
                     )
                   ],
@@ -78,8 +78,8 @@ class _RideCardState extends State<RideCard> {
                     SvgPicture.asset(
                       ImagesAsset.time,
                       color: widget.rideModel.isSelected
-                          ? Color(0xFFF3F3C1)
-                          : Color(0xFF1F2421),
+                          ? ColorPath.SecondaryColor
+                          : ColorPath.Primarydark,
                       height: 8,
                       width: 8,
                     ),
@@ -90,8 +90,8 @@ class _RideCardState extends State<RideCard> {
                         fontSize: 11.0,
                         fontWeight: FontWeight.w300,
                         color: widget.rideModel.isSelected
-                            ? Color(0xFFF3F3C1)
-                            : Color(0xFF1F2421),
+                            ? ColorPath.SecondaryColor
+                            : ColorPath.Primarydark,
                       ),
                     ),
                     XMargin(3),
@@ -100,8 +100,8 @@ class _RideCardState extends State<RideCard> {
                         Icon(
                           Icons.person_outline,
                           color: widget.rideModel.isSelected
-                              ? Color(0xFFF3F3C1)
-                              : Color(0xFF1F2421),
+                              ? ColorPath.SecondaryColor
+                              : ColorPath.Primarydark,
                           size: 10,
                         ),
                         Text(
@@ -110,8 +110,8 @@ class _RideCardState extends State<RideCard> {
                             fontSize: 11.0,
                             fontWeight: FontWeight.w300,
                             color: widget.rideModel.isSelected
-                                ? Color(0xFFF3F3C1)
-                                : Color(0xFF1F2421),
+                                ? ColorPath.SecondaryColor
+                                : ColorPath.Primarydark,
                           ),
                         ),
                       ],
@@ -124,8 +124,8 @@ class _RideCardState extends State<RideCard> {
                     SvgPicture.asset(
                       ImagesAsset.up,
                       color: widget.rideModel.isSelected
-                          ? Color(0xFFF3F3C1)
-                          : Color(0xFF1F2421),
+                          ? ColorPath.SecondaryColor
+                          : ColorPath.Primarydark,
                     ),
                     Text(
                       "View trip cost details",
@@ -133,8 +133,8 @@ class _RideCardState extends State<RideCard> {
                         fontSize: 11.0,
                         fontWeight: FontWeight.w300,
                         color: widget.rideModel.isSelected
-                            ? Color(0xFFF3F3C1)
-                            : Color(0xFF1F2421),
+                            ? ColorPath.SecondaryColor
+                            : ColorPath.Primarydark,
                       ),
                     ),
                   ],
@@ -152,8 +152,8 @@ class _RideCardState extends State<RideCard> {
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       color: widget.rideModel.isSelected
-                          ? Color(0xFFF3F3C1)
-                          : Color(0xFF1F2421),
+                          ? ColorPath.SecondaryColor
+                          : ColorPath.Primarydark,
                     ),
                   ),
                   YMargin(5.0),
@@ -163,8 +163,8 @@ class _RideCardState extends State<RideCard> {
                       fontSize: 9.0,
                       fontWeight: FontWeight.w500,
                       color: widget.rideModel.isSelected
-                          ? Color(0xFFF3F3C1)
-                          : Color(0xFF1F2421),
+                          ? ColorPath.SecondaryColor
+                          : ColorPath.Primarydark,
                     ),
                   ),
                 ],

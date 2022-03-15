@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/components/auth_header.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
+import 'package:rydr/utils/colors.dart';
 
 class ForgetPassword extends StatefulWidget {
   const ForgetPassword({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorPath.Primarywhite,
         body: SingleChildScrollView(
           child: Column(children: [
             YMargin(100),
@@ -62,7 +63,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                               "Forget Password",
                               style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.w500,
-                                color: Color(0xFF1F2421),
+                                color: ColorPath.Primarydark,
                                 fontSize: 18,
                               ),
                             ),
@@ -71,7 +72,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                 "Did you forget your password? You can easily retrive it \nby telling us your mobile number!",
                                 style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.normal,
-                                  color: Color(0xFF1F2421),
+                                  color: ColorPath.Primarydark,
                                   fontSize: 10,
                                 )),
                           ],
@@ -96,8 +97,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           width: context.screenWidth(),
                           decoration: BoxDecoration(
                             color: isChange
-                                ? Color(0XFF1F2421)
-                                : Color(0xFFDCE1DE),
+                                ? ColorPath.Secondarygrey
+                                : ColorPath.Primaryfield,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           child: InkWell(
@@ -119,7 +120,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                 Text(
                                   "Submit",
                                   style: GoogleFonts.poppins(
-                                    color: Colors.white,
+                                    color: ColorPath.Primarywhite,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),

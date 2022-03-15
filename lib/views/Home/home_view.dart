@@ -9,6 +9,7 @@ import 'package:rydr/models/favorite_item_model.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
+import 'package:rydr/utils/colors.dart';
 import 'package:rydr/views/Home/build_trip_details.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
 import 'package:rydr/views/Home/schedule_trip.dart';
@@ -37,11 +38,12 @@ class _HomeviewState extends State<Homeview> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _key,
-      backgroundColor: Colors.white,
+      backgroundColor: ColorPath.Primarywhite,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(70.0),
           child: AppBar(
-            backgroundColor: Color(0xFF1F2421),
+            brightness: Brightness.dark,
+            backgroundColor: ColorPath.Primarydark,
             automaticallyImplyLeading: false,
             actions: [
               Padding(
@@ -49,7 +51,7 @@ class _HomeviewState extends State<Homeview> {
                 child: Container(
                   width: 45,
                   decoration: BoxDecoration(
-                      color: Color(0xFF878E88),
+                      color: ColorPath.PrimaryColor,
                       borderRadius: BorderRadius.all(Radius.circular(8.0))),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -72,7 +74,7 @@ class _HomeviewState extends State<Homeview> {
                 Text(
                   "Hello, Daniel 👋🏾",
                   style: GoogleFonts.poppins(
-                    color: Colors.white,
+                    color: ColorPath.Primarywhite,
                     fontWeight: FontWeight.w400,
                     fontSize: 17,
                   ),
@@ -80,13 +82,14 @@ class _HomeviewState extends State<Homeview> {
                 Text(
                   "Catch a ride now!",
                   style: GoogleFonts.poppins(
-                    color: Color(0xFF878E88),
+                    color: ColorPath.PrimaryColor,
                     fontWeight: FontWeight.w400,
                     fontSize: 10,
                   ),
                 ),
               ],
-            ), systemOverlayStyle: SystemUiOverlayStyle.light,
+            ),
+            systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
       drawer: RyderDrawer(),
       body: Stack(
@@ -115,7 +118,7 @@ class _HomeviewState extends State<Homeview> {
                       height: 300,
                       width: context.screenWidth(),
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: ColorPath.Primarywhite,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(25.0),
                               topRight: Radius.circular(25.0))),
@@ -128,7 +131,7 @@ class _HomeviewState extends State<Homeview> {
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(80)),
-                                color: Color(0xFF878E88).withOpacity(0.5),
+                                color: ColorPath.PrimaryColor.withOpacity(0.5),
                               )),
                           YMargin(20),
                           SingleChildScrollView(
@@ -174,7 +177,7 @@ class _HomeviewState extends State<Homeview> {
                                       height: 40,
                                       width: context.screenWidth() - 100,
                                       decoration: BoxDecoration(
-                                        color: Color(0XFF1F2421),
+                                        color: ColorPath.Secondarygrey,
                                         borderRadius:
                                             BorderRadius.circular(10.0),
                                       ),
@@ -189,7 +192,7 @@ class _HomeviewState extends State<Homeview> {
                                             Text(
                                               "Set favorite locations",
                                               style: GoogleFonts.poppins(
-                                                color: Colors.white,
+                                                color: ColorPath.Primarywhite,
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w400,
                                               ),
@@ -231,7 +234,7 @@ class _HomeviewState extends State<Homeview> {
               height: context.screenHeight() / 2.1,
               width: context.screenWidth(),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: ColorPath.Primarywhite,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(15),
                   topRight: Radius.circular(15),
@@ -251,7 +254,7 @@ class _HomeviewState extends State<Homeview> {
                             style: GoogleFonts.montserrat(
                               fontSize: 20.0,
                               fontWeight: FontWeight.w500,
-                              color: Color(0xFF1F2421),
+                              color: ColorPath.Primarydark,
                             ),
                           ),
                           Text(
@@ -259,12 +262,12 @@ class _HomeviewState extends State<Homeview> {
                             style: GoogleFonts.montserrat(
                               fontSize: 11.0,
                               fontWeight: FontWeight.w300,
-                              color: Color(0xFF50555C),
+                              color: ColorPath.offBlack,
                             ),
                           ),
                           YMargin(10),
                           DotWidget(
-                            dashColor: Color(0xFFDCE1DE),
+                            dashColor: ColorPath.Primaryfield,
                             dashHeight: 1.0,
                             dashWidth: 2.0,
                           ),
@@ -294,7 +297,7 @@ class _HomeviewState extends State<Homeview> {
                                   style: GoogleFonts.montserrat(
                                     fontSize: 11.0,
                                     fontWeight: FontWeight.w300,
-                                    color: Color(0xFF50555C),
+                                    color: ColorPath.offBlack,
                                   ),
                                 ),
                               ),
@@ -336,7 +339,7 @@ class _HomeviewState extends State<Homeview> {
                               height: 40,
                               width: context.screenWidth(),
                               decoration: BoxDecoration(
-                                color: Color(0xFF1F2421),
+                                color: ColorPath.Primarydark,
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               child: InkWell(
@@ -349,7 +352,7 @@ class _HomeviewState extends State<Homeview> {
                                     Text(
                                       "Set  favorite locations",
                                       style: GoogleFonts.poppins(
-                                        color: Colors.white,
+                                        color: ColorPath.Primarywhite,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
@@ -390,7 +393,7 @@ class FavoriteItems extends StatelessWidget {
         height: 120,
         width: 110,
         decoration: BoxDecoration(
-            border: Border.all(color: Color(0xFF878E88)),
+            border: Border.all(color: ColorPath.PrimaryColor),
             borderRadius: BorderRadius.all(
               Radius.circular(25),
             )),
@@ -415,7 +418,7 @@ class FavoriteItems extends StatelessWidget {
               style: GoogleFonts.montserrat(
                 fontSize: 10,
                 fontWeight: FontWeight.w600,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             YMargin(5.0),
@@ -460,7 +463,7 @@ class CustomPlaceTextWidget extends StatelessWidget {
         scrollPadding: EdgeInsets.symmetric(vertical: 15),
         onSubmitted: onSubmitted,
         controller: placetexteditingcontroller,
-        cursorColor: Color(0xFF000000),
+        cursorColor: ColorPath.Primaryblack,
         keyboardType: TextInputType.streetAddress,
         autofillHints: [AutofillHints.addressCity],
         decoration: InputDecoration(
@@ -471,7 +474,7 @@ class CustomPlaceTextWidget extends StatelessWidget {
           prefixIcon: prefix,
           suffix: suffix,
           filled: true,
-          fillColor: Color(0xFFDCE1DE).withOpacity(0.3),
+          fillColor: ColorPath.Primaryfield.withOpacity(0.3),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
             borderSide: BorderSide(
@@ -481,7 +484,7 @@ class CustomPlaceTextWidget extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
             borderSide: BorderSide(
-              color: Color(0xFFDCE1DE),
+              color: ColorPath.Primaryfield,
             ),
           ),
           hintText: hintText,
@@ -489,7 +492,7 @@ class CustomPlaceTextWidget extends StatelessWidget {
           hintStyle: GoogleFonts.montserrat(
             fontSize: 13,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF1F2421).withOpacity(0.5),
+            color: ColorPath.Primarydark.withOpacity(0.5),
           ),
         ),
       ),
@@ -522,7 +525,7 @@ class PrefixIcon2 extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: SvgPicture.asset(
         ImagesAsset.locate,
-        color: Color(0xFF1F2421).withOpacity(0.5),
+        color: ColorPath.Primarydark.withOpacity(0.5),
         height: 10,
         width: 10,
       ),
@@ -543,7 +546,7 @@ class SuffixNow1 extends StatelessWidget {
           height: 25,
           width: 60,
           decoration: BoxDecoration(
-              color: Color(0xFF1F2421),
+              color: ColorPath.Primarydark,
               borderRadius: BorderRadius.all(Radius.circular(5.0))),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -551,14 +554,14 @@ class SuffixNow1 extends StatelessWidget {
               Icon(
                 Icons.timer_outlined,
                 size: 13.0,
-                color: Color(0xFFFFFFFF),
+                color: ColorPath.Primarywhite,
               ),
               Text(
                 "Now",
                 style: GoogleFonts.montserrat(
                   fontSize: 10.0,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xFFFFFFFF),
+                  color: ColorPath.Primarywhite,
                 ),
               )
             ],
@@ -584,12 +587,12 @@ class SuffixNow2 extends StatelessWidget {
             height: 20,
             width: 20,
             decoration: BoxDecoration(
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
                 borderRadius: BorderRadius.all(Radius.circular(5.0))),
             child: Icon(
               Icons.add,
               size: 12.0,
-              color: Colors.white,
+              color: ColorPath.Primarywhite,
             )));
   }
 }
@@ -607,7 +610,7 @@ class CustomPlaceHolder extends StatelessWidget {
         width: context.screenWidth(),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(9),
-          color: Color(0xFFDCE1DE).withOpacity(0.3),
+          color: ColorPath.Primaryfield.withOpacity(0.3),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -620,7 +623,7 @@ class CustomPlaceHolder extends StatelessWidget {
                 style: GoogleFonts.montserrat(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xFF1F2421),
+                  color: ColorPath.Primarydark,
                 ),
               ),
             ]),
@@ -630,7 +633,7 @@ class CustomPlaceHolder extends StatelessWidget {
                   height: 25,
                   width: 60,
                   decoration: BoxDecoration(
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                       borderRadius: BorderRadius.all(Radius.circular(5.0))),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -638,14 +641,14 @@ class CustomPlaceHolder extends StatelessWidget {
                       Icon(
                         Icons.timer_outlined,
                         size: 13.0,
-                        color: Color(0xFFFFFFFF),
+                        color: ColorPath.Primarywhite,
                       ),
                       Text(
                         "Now",
                         style: GoogleFonts.montserrat(
                           fontSize: 10.0,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFFFFFFFF),
+                          color: ColorPath.Primarywhite,
                         ),
                       )
                     ],
@@ -667,7 +670,7 @@ class CustomPlaceHolder extends StatelessWidget {
                 height: context.screenHeight() - 118,
                 width: context.screenWidth(),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: ColorPath.Primarywhite,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
@@ -728,7 +731,7 @@ class CustomPlaceHolder extends StatelessWidget {
               style: GoogleFonts.montserrat(
                 fontSize: 10,
                 fontWeight: FontWeight.w500,
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
               ),
             ),
             YMargin(10),
@@ -746,7 +749,7 @@ class CustomPlaceHolder extends StatelessWidget {
               height: 70,
               width: context.screenWidth(),
               decoration: BoxDecoration(
-                color: Color(0xFF1F2421),
+                color: ColorPath.Primarydark,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
@@ -763,7 +766,7 @@ class CustomPlaceHolder extends StatelessWidget {
                       style: GoogleFonts.montserrat(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xFFFFFFFF),
+                        color: ColorPath.Primarywhite,
                       ),
                     )
                   ]),
@@ -796,7 +799,9 @@ class _FavoriteCardState extends State<FavoriteCard> {
       height: 50,
       width: 50,
       decoration: BoxDecoration(
-          color: widget.favoriteLists.isSelected ? Colors.black : Colors.white,
+          color: widget.favoriteLists.isSelected
+              ? Colors.black
+              : ColorPath.Primarywhite,
           border: Border.all(
               color: widget.favoriteLists.isSelected
                   ? Colors.transparent
@@ -825,8 +830,8 @@ class _FavoriteCardState extends State<FavoriteCard> {
           SvgPicture.asset(
             widget.favoriteLists.icon,
             color: widget.favoriteLists.isSelected
-                ? Color(0xFFDCE1DE)
-                : Color(0xFF1F2421),
+                ? ColorPath.Primaryfield
+                : ColorPath.Primarydark,
           )
         ],
       ),
@@ -872,7 +877,7 @@ Widget tripdetails(
                   style: GoogleFonts.montserrat(
                     fontSize: 12.0,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF000000).withOpacity(0.5),
+                    color: ColorPath.Primaryblack.withOpacity(0.5),
                   ),
                 ),
                 YMargin(10),
@@ -904,7 +909,7 @@ Widget tripdetails(
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  color: Color(0xFF1F2421),
+                  color: ColorPath.Primarydark,
                   borderRadius: BorderRadius.circular(7.0)),
               child: Row(
                 children: [
@@ -919,7 +924,7 @@ Widget tripdetails(
                     style: GoogleFonts.montserrat(
                       fontSize: 11.0,
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFFDCE1DE),
+                      color: ColorPath.Primaryfield,
                     ),
                   )
                 ],

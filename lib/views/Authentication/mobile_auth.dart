@@ -5,6 +5,7 @@ import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/components/auth_header.dart';
 import 'package:rydr/views/Authentication/verify_otp.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
+import 'package:rydr/utils/colors.dart';
 
 class MobileAuth extends StatefulWidget {
   MobileAuth({Key? key}) : super(key: key);
@@ -39,7 +40,7 @@ class _MobileAuthState extends State<MobileAuth> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorPath.Primarywhite,
       body: SingleChildScrollView(
         child: FadeInDown(
           duration: Duration(
@@ -56,7 +57,7 @@ class _MobileAuthState extends State<MobileAuth> {
                     "Let’s know you",
                     style: GoogleFonts.montserrat(
                       fontWeight: FontWeight.w500,
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                       fontSize: 23,
                     ),
                   ),
@@ -64,14 +65,14 @@ class _MobileAuthState extends State<MobileAuth> {
                   Text("Please enter your Mobile Number",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.normal,
-                        color: Color(0xFF1F2421),
+                        color: ColorPath.Primarydark,
                         fontSize: 14,
                       )),
                   YMargin(3.0),
                   Text("An OTP will be sent you for verification?",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w500,
-                        color: Color(0xFF878E88),
+                        color: ColorPath.PrimaryColor,
                         fontSize: 9.0,
                       )),
                 ],
@@ -93,7 +94,9 @@ class _MobileAuthState extends State<MobileAuth> {
                   height: 50,
                   width: context.screenWidth(),
                   decoration: BoxDecoration(
-                    color: isChange ? Color(0XFF1F2421) : Color(0xFFDCE1DE),
+                    color: isChange
+                        ? ColorPath.Secondarygrey
+                        : ColorPath.Primaryfield,
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: InkWell(
@@ -118,7 +121,7 @@ class _MobileAuthState extends State<MobileAuth> {
                         Text(
                           "Next",
                           style: GoogleFonts.poppins(
-                            color: Colors.white,
+                            color: ColorPath.Primarywhite,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -154,7 +157,7 @@ class CustomTextFieldWidget extends StatelessWidget {
       this.prefixWidget,
       this.hideText: false,
       this.suffixWidget,
-      this.fillcolour: const Color(0xFFDCE1DE),
+      this.fillcolour: ColorPath.Primaryfield,
       this.onChanged})
       : super(key: key);
 
@@ -169,7 +172,7 @@ class CustomTextFieldWidget extends StatelessWidget {
         onChanged: onChanged,
         obscureText: hideText,
         controller: controller,
-        cursorColor: Color(0xFF000000),
+        cursorColor: ColorPath.Primaryblack,
         keyboardType: keyboardType,
         autofillHints: autofill,
         decoration: InputDecoration(
@@ -189,7 +192,7 @@ class CustomTextFieldWidget extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9),
             borderSide: BorderSide(
-              color: Color(0xFFDCE1DE),
+              color: ColorPath.Primaryfield,
             ),
           ),
           hintText: hintText,
@@ -215,7 +218,7 @@ class CustomDropdown extends StatelessWidget {
     this.dropdownValue,
     required this.items,
     this.onChanged,
-    this.backgroundColour: Colors.white,
+    this.backgroundColour: ColorPath.Primarywhite,
   }) : super(key: key);
 
   @override
@@ -365,7 +368,7 @@ class NumericPad extends StatelessWidget {
             child: Icon(
               Icons.backspace,
               size: 28,
-              color: Color(0xFF1F1F1F),
+              color: ColorPath.offWhite,
             ),
           ),
         ).ripple(
@@ -384,7 +387,7 @@ class NumericPad extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 16, bottom: 16),
         decoration: BoxDecoration(
-          color: Color(0xFF1F2421),
+          color: ColorPath.Primarydark,
           borderRadius: BorderRadius.all(
             Radius.circular(15),
           ),
@@ -393,7 +396,7 @@ class NumericPad extends StatelessWidget {
           child: Icon(
             Icons.arrow_forward,
             size: 28,
-            color: Color(0xFFFFFFFF),
+            color: ColorPath.Primarywhite,
           ),
         ),
       ).ripple(() {

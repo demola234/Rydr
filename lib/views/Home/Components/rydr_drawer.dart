@@ -10,6 +10,7 @@ import 'package:rydr/views/Payment/Coupons/apply_coupons.dart';
 import 'package:rydr/views/Payment/payment.dart';
 import 'package:rydr/views/Settings/manage_password.dart';
 import 'package:rydr/views/Support/support.dart';
+import 'package:rydr/utils/colors.dart';
 import 'package:rydr/views/TripHistory/trip_screen.dart';
 
 class RyderDrawer extends StatelessWidget {
@@ -54,7 +55,7 @@ class RyderDrawer extends StatelessWidget {
                         style: GoogleFonts.montserrat(
                           fontSize: 15.0,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFF1F2421),
+                          color: ColorPath.Primarydark,
                         ),
                       ),
                       YMargin(15),
@@ -64,7 +65,7 @@ class RyderDrawer extends StatelessWidget {
                           height: 33,
                           width: 125,
                           decoration: BoxDecoration(
-                            color: Color(0xFF1F2421),
+                            color: ColorPath.Primarydark,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           child: InkWell(
@@ -75,7 +76,7 @@ class RyderDrawer extends StatelessWidget {
                                 Text(
                                   "Edit Profile",
                                   style: GoogleFonts.poppins(
-                                    color: Colors.white,
+                                    color: ColorPath.Primarywhite,
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -90,7 +91,7 @@ class RyderDrawer extends StatelessWidget {
                 ),
                 YMargin(10),
                 DrawerDots(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -179,7 +180,7 @@ class RyderDrawer extends StatelessWidget {
                 ),
                 Spacer(),
                 DrawerDots(
-                  dashColor: Color(0xFFDCE1DE),
+                  dashColor: ColorPath.Primaryfield,
                   dashHeight: 1.0,
                   dashWidth: 2.0,
                 ),
@@ -188,7 +189,7 @@ class RyderDrawer extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                       fontSize: 10.0,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xFF1F2421),
+                      color: ColorPath.Primarydark,
                     )),
                 YMargin(10),
                 Row(
@@ -226,7 +227,7 @@ class RyderDrawer extends StatelessWidget {
                     height: 40,
                     width: 137,
                     decoration: BoxDecoration(
-                      color: Color(0xFFFF2E2E),
+                      color: ColorPath.Primaryred,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Row(
@@ -235,7 +236,7 @@ class RyderDrawer extends StatelessWidget {
                         Text(
                           "Log out",
                           style: GoogleFonts.poppins(
-                            color: Colors.white,
+                            color: ColorPath.Primarywhite,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -279,7 +280,7 @@ class DrawerListTile extends StatelessWidget {
           style: GoogleFonts.montserrat(
             fontSize: 12.0,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF1F2421),
+            color: ColorPath.Primarydark,
           )),
     );
   }

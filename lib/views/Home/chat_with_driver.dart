@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rydr/utils/images_path.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Home/Components/home_extention.dart';
-
+import 'package:rydr/utils/colors.dart';
 import 'drivers_details.dart';
 
 class ChatWithDriver extends StatefulWidget {
@@ -79,7 +79,7 @@ class _ChatWithDriverState extends State<ChatWithDriver> {
                                   style: GoogleFonts.montserrat(
                                       fontSize: 10.0,
                                       fontWeight: FontWeight.w500,
-                                      color: Color(0xFF1F2421)),
+                                      color: ColorPath.Primarydark),
                                 ),
                                 YMargin(5),
                                 Container(
@@ -90,8 +90,8 @@ class _ChatWithDriverState extends State<ChatWithDriver> {
                                   ),
                                   decoration: BoxDecoration(
                                     color: msg.user == 1
-                                        ? Color(0xFFF3F3C1)
-                                        : Color(0xFF878E88),
+                                        ? ColorPath.SecondaryColor
+                                        : ColorPath.PrimaryColor,
                                     borderRadius: BorderRadius.circular(9.0),
                                   ),
                                   child: Text(
@@ -100,8 +100,8 @@ class _ChatWithDriverState extends State<ChatWithDriver> {
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w300,
                                       color: msg.user == 1
-                                          ? Color(0xFF1F2421)
-                                          : Colors.white,
+                                          ? ColorPath.Primarydark
+                                          : ColorPath.Primarywhite,
                                     ),
                                   ),
                                 ),
@@ -132,7 +132,7 @@ class _ChatWithDriverState extends State<ChatWithDriver> {
                     style: GoogleFonts.montserrat(
                         fontSize: 12.0,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xFF1F2421)),
+                        color: ColorPath.Primarydark),
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(
                         vertical: 10.0,
@@ -170,7 +170,7 @@ class _ChatWithDriverState extends State<ChatWithDriver> {
                   width: 50,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF1F2421),
+                    color: ColorPath.Primarydark,
                   ),
                   child: IconButton(
                     onPressed: () {
@@ -178,7 +178,7 @@ class _ChatWithDriverState extends State<ChatWithDriver> {
                     },
                     icon: Icon(
                       Icons.send,
-                      color: Colors.white,
+                      color: ColorPath.Primarywhite,
                     ),
                   ),
                 )
@@ -199,7 +199,7 @@ class ChatAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xFF1F2421),
+      backgroundColor: ColorPath.Primarydark,
       automaticallyImplyLeading: false,
       centerTitle: true,
       leadingWidth: 67,
@@ -222,7 +222,7 @@ class ChatAppBar extends StatelessWidget {
             style: GoogleFonts.montserrat(
               fontSize: 12.0,
               fontWeight: FontWeight.w400,
-              color: Color(0xFFF3F3C1),
+              color: ColorPath.SecondaryColor,
             ),
           ),
         ],
@@ -237,13 +237,13 @@ class ChatAppBar extends StatelessWidget {
             width: 45,
             height: 45,
             decoration: BoxDecoration(
-                color: Color(0xFFDCE1DE),
+                color: ColorPath.Primaryfield,
                 borderRadius: BorderRadius.all(Radius.circular(10.0))),
             child: Center(
                 child: Icon(
               Icons.arrow_back_ios,
               size: 18,
-              color: Color(0xFF1F2421),
+              color: ColorPath.Primarydark,
             )),
           ),
         ),
@@ -263,7 +263,8 @@ class ChatAppBar extends StatelessWidget {
             ).ripple(() {}),
           ),
         )
-      ], systemOverlayStyle: SystemUiOverlayStyle.light,
+      ],
+      systemOverlayStyle: SystemUiOverlayStyle.light,
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rydr/utils/colors.dart';
 import 'package:rydr/utils/margins.dart';
 import 'package:rydr/views/Authentication/mobile_auth.dart';
 import 'package:rydr/views/Payment/payment.dart';
@@ -52,7 +53,7 @@ class _ManagePasswordState extends State<ManagePassword> {
                 height: 50,
                 width: context.screenWidth(),
                 decoration: BoxDecoration(
-                  color: Color(0XFF1F2421),
+                  color: ColorPath.Secondarygrey,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Row(
@@ -61,7 +62,7 @@ class _ManagePasswordState extends State<ManagePassword> {
                     Text(
                       "Update Password",
                       style: GoogleFonts.poppins(
-                        color: Colors.white,
+                        color: ColorPath.Primarywhite,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
