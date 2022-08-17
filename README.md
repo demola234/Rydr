@@ -21,7 +21,7 @@ Please Star💫 This Repository!
 
 | 💮 ScreenShots                                                                                        | 💮ScreenShots                                                                                         |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-1.png?raw=true" width="400"> | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-3.png?raw=true" width="400"> |
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203498.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203499.png?raw=true" width="400"> |
 | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-2.png?raw=true" width="400"> | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-4.png?raw=true" width="400"> |
 
 | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-5.png?raw=true" width="400">
