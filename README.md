@@ -1,16 +1,31 @@
-# rydr
+[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
+[![License: MIT][license_badge]][license_link]
 
-A new Flutter project.
+# Muvi [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/AdemolaDi.svg?style=social)](https://twitter.com/AdemolaDi)
 
-## Getting Started
+Rydr UI is Ride Hailing Application that allows users to book ride for various locations like bolt, uber with in app Wallet
 
-This project is a starting point for a Flutter application.
+Please Star💫 This Repository!
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [x] Book Ride from various Locations.
+- [x] In App Wallet.
+- [x] Leave Rating or Review.
+- [x] Report missing items.
+- [x] Save favorite locations.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 ScreenShots
+
+<img src="https://github.com/demola234/muvi/blob/main/screenshots/Logo.png?raw=true" height="300"/>
+
+| 💮 ScreenShots                                                                                        | 💮ScreenShots                                                                                         |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-1.png?raw=true" width="400"> | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-3.png?raw=true" width="400"> |
+| <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-2.png?raw=true" width="400"> | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-4.png?raw=true" width="400"> |
+
+| <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-5.png?raw=true" width="400">
+
+## 🧒🏾 Author
+
+**Kolawole Ademola** [![Twitter Follow](https://img.shields.io/twitter/follow/AdemolaDi.svg?style=social)](https://twitter.com/AdemolaDi)
