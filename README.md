@@ -17,7 +17,7 @@ Please Star💫 This Repository!
 
 ## 📸 ScreenShots
 
-<img src="https://github.com/demola234/muvi/blob/main/screenshots/Logo.png?raw=true" height="300"/>
+<img src="https://github.com/demola234/Rydr/blob/main/screenshots/Cover.png?raw=true" height="300"/>
 
 | 💮 ScreenShots                                                                                        | 💮ScreenShots                                                                                         |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
