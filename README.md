@@ -22,9 +22,18 @@ Please Star💫 This Repository!
 | 💮 ScreenShots                                                                                        | 💮ScreenShots                                                                                         |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203498.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203499.png?raw=true" width="400"> |
-| <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-2.png?raw=true" width="400"> | <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-4.png?raw=true" width="400"> |
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203500.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203513.png?raw=true" width="400"> |
 
-| <img src="https://github.com/demola234/muvi/blob/main/screenshots/Splash-5.png?raw=true" width="400">
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203514.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203515.png?raw=true" width="400"> |
+
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203498.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203516.png?raw=true" width="400"> |
+
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203517.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203518.png?raw=true" width="400"> |
+
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203519.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203520.png?raw=true" width="400"> |
+
+| <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203521.png?raw=true" width="400"> | <img src="https://github.com/demola234/Rydr/blob/main/screenshots/Frame%203522.png?raw=true" width="400"> |
+
 
 ## 🧒🏾 Author
 
